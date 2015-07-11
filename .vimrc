@@ -76,6 +76,8 @@ vnoremap : ;
 noremap <F7> :tabprev<CR>
 noremap <F8> :tabnext<CR>
 
+nnoremap <F10> :!make<CR>
+
 " Clear highlight search
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
