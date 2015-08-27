@@ -85,8 +85,8 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 nnoremap <space> zz
 
 " Scroll using arrow keys
-map <Up> 2<C-y>
-map <Down> 2<C-e>
+noremap <Up> 2<C-y>
+noremap <Down> 2<C-e>
 
 
 """"""""
