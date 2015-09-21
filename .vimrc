@@ -15,7 +15,7 @@ set background=dark
 colorscheme solarized
 
 set cursorline
-set relativenumber
+set number
 
 set hlsearch
 
