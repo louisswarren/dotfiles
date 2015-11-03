@@ -1,0 +1,11 @@
+mkdir ~/olddotfiles
+mv ~/.vimrc ~/.vim ~/.Xresources ~/olddotfiles/
+
+ln -s ~/git/dotfiles/.vimrc ~/
+ln -s ~/git/dotfiles/.vim ~/
+mkdir ~/.vim/colors
+
+ln -s ~/git/solarized/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+cp ~/git/dotfiles/.Xresources ~/
+cat ~/git/solarized/xresources/solarized >> ~/.Xresources
+
