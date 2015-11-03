@@ -1,11 +1,15 @@
+# Backup
 mkdir ~/olddotfiles
 mv ~/.vimrc ~/.vim ~/.Xresources ~/olddotfiles/
 
+# Vim
 ln -s ~/git/dotfiles/.vimrc ~/
-ln -s ~/git/dotfiles/.vim ~/
+mkdir ~/.vim
+ln -s ~/git/dotfiles/.vim/ftplugin ~/.vim/
 mkdir ~/.vim/colors
-
 ln -s ~/git/solarized/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
+
+# .Xresources
 cp ~/git/dotfiles/.Xresources ~/
 cat ~/git/solarized/xresources/solarized >> ~/.Xresources
 
