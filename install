@@ -12,4 +12,5 @@ ln -s ~/git/solarized/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 # .Xresources
 cp ~/git/dotfiles/.Xresources ~/
 cat ~/git/solarized/xresources/solarized >> ~/.Xresources
+xrdb -merge ~/.Xresources
 
