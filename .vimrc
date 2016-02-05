@@ -3,6 +3,7 @@
 """""""""
 
 filetype plugin on
+let g:tex_flavor='latex'
 
 
 """"""""""""""
