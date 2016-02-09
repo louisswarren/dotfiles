@@ -102,5 +102,4 @@ set backspace=2
 set guioptions-=m
 set guioptions-=T
 
-set lines=40
 set columns=88
