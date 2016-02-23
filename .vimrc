@@ -100,6 +100,13 @@ noremap <Up> 2<C-y>
 noremap <Down> 2<C-e>
 
 
+" Copy and paste
+nnoremap  <leader>c "+y
+vnoremap  <leader>c "+y
+nnoremap <leader>v "+p
+nnoremap <leader>V "+P
+
+
 """"""""
 " gVim "
 """"""""
@@ -112,3 +119,4 @@ set guioptions-=m
 set guioptions-=T
 
 set columns=88
+
