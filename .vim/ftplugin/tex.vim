@@ -1,7 +1,7 @@
 nnoremap <buffer><f9> :w<cr> :!pdflatex %<cr>
 
-imap <C-b> <esc><C-e>O
-nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>
+imap <C-b> <esc><C-b>O
+nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 
