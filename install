@@ -1,6 +1,9 @@
 # Backup
 mkdir ~/olddotfiles
-mv ~/.vimrc ~/.vim ~/.Xresources ~/olddotfiles/
+mv ~/.inputrc ~/.vimrc ~/.vim ~/.Xresources ~/olddotfiles/
+
+# inputrc
+ln -s ~/git/dofiles/.inputrc ~/
 
 # Vim
 ln -s ~/git/dotfiles/.vimrc ~/
