@@ -117,6 +117,3 @@ set backspace=2
 " Hide menu and toolbars
 set guioptions-=m
 set guioptions-=T
-
-set columns=88
-
