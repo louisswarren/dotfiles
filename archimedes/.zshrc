@@ -24,3 +24,5 @@ zle_highlight=(default:bold)
 alias ls='ls --color=auto'
 
 # bindkey '^R' history-incremental-search-backward
+
+export PATH=~/bin:$PATH
