@@ -13,6 +13,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PROMPT="%n@%m:%~$ "
-RPROMPT="%(1j,[%j],)"
+autoload -Uz colors
+colors
+
+PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}:%~$ "
+RPROMPT="%(1j,%{$fg[blue]%}[%{$fg[red]%}%j%{$fg[blue]%}]%{$reset_color%},)"
+#zle_highlight=(default:bold)
+zle_highlight=()
+
+alias ls='ls --color=auto'
+
 # bindkey '^R' history-incremental-search-backward
