@@ -14,6 +14,8 @@ call plug#end()
 filetype plugin on
 let g:tex_flavor='latex'
 
+set t_Co=256
+
 
 """"""""""""""
 " Appearance "
@@ -38,7 +40,7 @@ set hlsearch
 let &colorcolumn=join(range(81,84),",")
 
 " Highlight trailing whitespace
-highlight TrailingWhitespace ctermbg=magenta guibg=#382424
+highlight TrailingWhitespace ctermbg=magenta
 autocmd ColorScheme * highlight TrailingWhitespace ctermbg=magenta guibg=magenta
 autocmd BufWinEnter * match TrailingWhitespace /\s\+$/
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
