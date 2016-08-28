@@ -113,9 +113,12 @@ nnoremap <leader>V "+P
 " gVim "
 """"""""
 
-set guifont=DejaVu_Sans_Mono:h12:cANSI
-set backspace=2
+if has("win32")
+	set guifont=DejaVu_Sans_Mono:h12:cANSI
+	set backspace=2
+endif
 
 " Hide menu and toolbars
 set guioptions-=m
 set guioptions-=T
+set guioptions-=r
