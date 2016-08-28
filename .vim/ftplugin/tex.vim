@@ -13,6 +13,14 @@ nnoremap <leader>di1 yypO\RightLabel{$\mor$I}<esc>j0f$a\mor <esc>:s/AxiomC\\|Bin
 " Add label, restate as TrinaryInfC
 nnoremap <leader>de yypO\RightLabel{$\mor$E}<esc>j:s/AxiomC\\|UnaryInfC\\|BinaryInfC/TrinaryInfC/e<cr>
 
+" Add label, add and on the right side
+nnoremap <leader>ci0 yypO\RightLabel{$\mand$I}<esc>j$F$i \mand<esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
+" Add label, add and on the left side
+nnoremap <leader>ci1 yypO\RightLabel{$\mand$I}<esc>j0f$a\mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
+" Add label, restate as BinaryInfC
+nnoremap <leader>ce yypO\RightLabel{$\mand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
+
+
 " Add label, add implication before statement, replace to UnaryInfC
 nnoremap <leader>ii yypO\RightLabel{$\mimp$I}<esc>j0f$a\mimp <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/<cr>0/\\mimp<cr>
 " Add label, delete premise and implication, replace to BinaryInfC
