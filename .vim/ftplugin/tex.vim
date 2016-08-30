@@ -45,5 +45,9 @@ nnoremap <leader>ni yypO\RightLabel{$\lnot$I}<esc>j0f$a\lnot <esc>$? \\mimp \\bo
 " Add lable, remove lnot, add implies bottom, replace to UnaryInfC
 nnoremap <leader>ne yypO\RightLabel{$\lnot$E}<esc>j0/\\lnot<cr>xdw$F$i \mimp \bot<esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
 
+
+nnoremap <leader>ax o\AxiomC{[$$]}<esc>hhi
+nnoremap <leader>un :s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
+
 setlocal textwidth=80
 setlocal spell spelllang=en_nz
