@@ -18,8 +18,7 @@ nnoremap <leader>ci0 yypO\RightLabel{$\msand$I}<esc>j$F$i \mand <esc>:s/AxiomC\\
 " Add label, add and on the left side
 nnoremap <leader>ci1 yypO\RightLabel{$\msand$I}<esc>j0f$a \mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0/\\mand<cr>h
 " Add label, restate as BinaryInfC
-nnoremap <leader>ce yypO\RightLabel{$\msand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
-
+nnoremap <leader>ce yypO\RightLabel{$\msand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0f$l
 
 " Add label, add implication before statement, replace to UnaryInfC
 nnoremap <leader>ii yypO\RightLabel{$\mimp$I}<esc>j0f$a \mimp <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/<cr>0/\\mimp<cr>0/\\mimp<cr>h
@@ -38,6 +37,11 @@ nnoremap <leader>fi yypO\RightLabel{$\forall$I}<esc>j0f$a\forall_x (<esc>f$i)<es
 " Add label, delete forall, delete parentheses if they exist, replace to
 " UnaryInfC
 nnoremap <leader>fe yypO\RightLabel{$\forall$E}<esc>j0/\\forall<cr>dW0:s/\$(\(.*\))\$/$\1$/e<cr>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>f$l
+
+" Add label, add negation, remove implies bottom, replace to UnaryInfC
+nnoremap <leader>ni yypO\RightLabel{$\lnot$I}<esc>j0f$a\lnot <esc>$? \\mimp \\bot<cr>dt$:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\lnot<cr>El
+" Add lable, remove lnot, add implies bottom, replace to UnaryInfC
+nnoremap <leader>ne yypO\RightLabel{$\lnot$E}<esc>j0/\\lnot<cr>dW$F$i \mimp \bot<esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0f$l
 
 setlocal textwidth=80
 setlocal spell spelllang=en_nz
