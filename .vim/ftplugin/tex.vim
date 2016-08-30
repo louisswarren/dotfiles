@@ -5,6 +5,7 @@ nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 
+" Remove discharge brackets :s/[\(\$.*$\)\]/\1/e<cr> (possibly)
 
 " Add label, add or on the right side
 nnoremap <leader>di0 yypO\RightLabel{$\msor$I}<esc>j$F$i \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mor<cr>W
@@ -20,10 +21,11 @@ nnoremap <leader>ci1 yypO\RightLabel{$\msand$I}<esc>j0f$a \mand <esc>:s/AxiomC\\
 " Add label, restate as BinaryInfC
 nnoremap <leader>ce yypO\RightLabel{$\msand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0f$l
 
-" Add label, add implication before statement, replace to UnaryInfC
-nnoremap <leader>ii yypO\RightLabel{$\mimp$I}<esc>j0f$a \mimp <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/<cr>0/\\mimp<cr>0/\\mimp<cr>h
+" Add label, add implication before statement,
+" replace to UnaryInfC
+nnoremap <leader>ii yypO\RightLabel{$\mimp$I}<esc>j0f$a \mimp <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mimp<cr>0/\\mimp<cr>h
 " Add label, delete premise and implication, replace to BinaryInfC
-nnoremap <leader>ie yypO\RightLabel{$\mimip$E}<esc>j0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>f$l
+nnoremap <leader>ie yypO\RightLabel{$\mimp$E}<esc>j0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>f$l
 
 " Add label, add existence before statement, add parentheses around statement,
 " replace to UnaryInfC
