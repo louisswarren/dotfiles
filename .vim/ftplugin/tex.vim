@@ -30,6 +30,8 @@ nnoremap <leader>ie yypO\RightLabel{$\mimp$E}<esc>j0f$ld/\\mimp<cr>dW:s/\$(\(.*\
 " Add label, add existence before statement, add parentheses around statement,
 " replace to UnaryInfC
 nnoremap <leader>ei yypO\RightLabel{$\exists$I}<esc>j0f$a\exists_x (<esc>f$i)<esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f(
+" Create the assumption, remove parentheses, add discharge brackets
+nnoremap <leader>ea yyp/\\exists<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f{a[<esc>$i]<esc>0f$l
 " Add label, restate as BinaryInfC
 nnoremap <leader>ee yypO\RightLabel{$\exists$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
 
