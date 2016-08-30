@@ -7,18 +7,18 @@ nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 
 
 " Add label, add or on the right side
-nnoremap <leader>di0 yypO\RightLabel{$\mor$I}<esc>j$F$i \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mor<cr>W
+nnoremap <leader>di0 yypO\RightLabel{$\msor$I}<esc>j$F$i \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mor<cr>W
 " Add label, add or on the left side
-nnoremap <leader>di1 yypO\RightLabel{$\mor$I}<esc>j0f$a \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mor<cr>h
+nnoremap <leader>di1 yypO\RightLabel{$\msor$I}<esc>j0f$a \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\mor<cr>h
 " Add label, restate as TrinaryInfC
-nnoremap <leader>de yypO\RightLabel{$\mor$E}<esc>j:s/AxiomC\\|UnaryInfC\\|BinaryInfC/TrinaryInfC/e<cr>f$l
+nnoremap <leader>de yypO\RightLabel{$\msor$E}<esc>j:s/AxiomC\\|UnaryInfC\\|BinaryInfC/TrinaryInfC/e<cr>f$l
 
 " Add label, add and on the right side
-nnoremap <leader>ci0 yypO\RightLabel{$\mand$I}<esc>j$F$i \mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0/\\mand<cr>W
+nnoremap <leader>ci0 yypO\RightLabel{$\msand$I}<esc>j$F$i \mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0/\\mand<cr>W
 " Add label, add and on the left side
-nnoremap <leader>ci1 yypO\RightLabel{$\mand$I}<esc>j0f$a \mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0/\\mand<cr>h
+nnoremap <leader>ci1 yypO\RightLabel{$\msand$I}<esc>j0f$a \mand <esc>:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>0/\\mand<cr>h
 " Add label, restate as BinaryInfC
-nnoremap <leader>ce yypO\RightLabel{$\mand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
+nnoremap <leader>ce yypO\RightLabel{$\msand$E}<esc>j:s/AxiomC\\|UnaryInfC\\|TrinaryInfC/BinaryInfC/e<cr>
 
 
 " Add label, add implication before statement, replace to UnaryInfC
