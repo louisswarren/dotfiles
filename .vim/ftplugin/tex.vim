@@ -41,7 +41,7 @@ nnoremap <leader>fe yypO\RightLabel{$\forall$E}<esc>j0/\\forall<cr>dW0:s/\$(\(.*
 " Add label, add negation, remove implies bottom, replace to UnaryInfC
 nnoremap <leader>ni yypO\RightLabel{$\lnot$I}<esc>j0f$a\lnot <esc>$? \\mimp \\bot<cr>dt$:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0/\\lnot<cr>El
 " Add lable, remove lnot, add implies bottom, replace to UnaryInfC
-nnoremap <leader>ne yypO\RightLabel{$\lnot$E}<esc>j0/\\lnot<cr>dW$F$i \mimp \bot<esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0f$l
+nnoremap <leader>ne yypO\RightLabel{$\lnot$E}<esc>j0/\\lnot<cr>xdw$F$i \mimp \bot<esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>0f$l
 
 setlocal textwidth=80
 setlocal spell spelllang=en_nz
