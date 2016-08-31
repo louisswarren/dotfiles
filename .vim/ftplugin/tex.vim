@@ -11,6 +11,8 @@ nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 nnoremap <leader>di0 yypO\RightLabel{$\msor$I}<esc>j$F$i \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>W
 " Add label, add or on the left side
 nnoremap <leader>di1 yypO\RightLabel{$\msor$I}<esc>j0f$a \mor <esc>:s/AxiomC\\|BinaryInfC\\|TrinaryInfC/UnaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>h
+" Create the assumptions, remove parentheses, add discharge brackets
+nnoremap <leader>da yy2p0f$ld/\\mor<cr>xdw:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>j$F$d? \\?\\mor<cr>:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>
 " Add label, restate as TrinaryInfC
 nnoremap <leader>de yypO\RightLabel{$\msor$E}<esc>j:s/AxiomC\\|UnaryInfC\\|BinaryInfC/TrinaryInfC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
 
