@@ -11,48 +11,56 @@ function ChangeC(newtype)
 	s/AxiomC\|UnaryInfC\|BinaryInfC\|TrinaryInfC/\=a:newtype/
 endfunction
 
+function AddIntroLabel(symbol)
+	execute "normal! O\RightLabel{$" . a:symbol . "$I}\<esc>"
+endfunction
+
+function AddElimLabel(symbol)
+	execute "normal! O\RightLabel{$" . a:symbol . "$E}\<esc>"
+endfunction
+
 " Add label, add or on the right side
-nnoremap <leader>di0 yypO\RightLabel{$\msor$I}<esc>j$F$i \mor <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>W
+nnoremap <leader>di0 yyp:call AddIntroLabel("\\msor")<cr>j$F$i \mor <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>W
 " Add label, add or on the left side
-nnoremap <leader>di1 yypO\RightLabel{$\msor$I}<esc>j0f$a \mor <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>h
+nnoremap <leader>di1 yyp:call AddIntroLabel("\\msor")<cr>j0f$a \mor <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mor<cr>h
 " Create the assumptions, remove parentheses, add discharge brackets
 " Currently broken
 nnoremap <leader>da yy2p0f$ld/\\mor<cr>xdw:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>j$F$d? \\?\\mor<cr>:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>
 " Add label, restate as TrinaryInfC
-nnoremap <leader>de yypO\RightLabel{$\msor$E}<esc>j:call ChangeC("TrinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
+nnoremap <leader>de yyp:call AddElimLabel("\\msor")<cr>j:call ChangeC("TrinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
 
 " Add label, add and on the right side
-nnoremap <leader>ci0 yypO\RightLabel{$\msand$I}<esc>j$F$i \mand <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mand<cr>W
+nnoremap <leader>ci0 yyp:call AddIntroLabel("\\msand")<cr>j$F$i \mand <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mand<cr>W
 " Add label, add and on the left side
-nnoremap <leader>ci1 yypO\RightLabel{$\msand$I}<esc>j0f$a \mand <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mand<cr>h
+nnoremap <leader>ci1 yyp:call AddIntroLabel("\\msand")<cr>j0f$a \mand <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mand<cr>h
 " Add label, restate as BinaryInfC
-nnoremap <leader>ce yypO\RightLabel{$\msand$E}<esc>j:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
+nnoremap <leader>ce yyp:call AddElimLabel("\\msand")<cr>j:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
 
 " Add label, add implication before statement,
 " replace to UnaryInfC
-nnoremap <leader>ii yypO\RightLabel{$\mimp$I}<esc>j0f$a \mimp <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mimp<cr>0/\\mimp<cr>h
+nnoremap <leader>ii yyp:call AddIntroLabel("\\mimp")<cr>j0f$a \mimp <esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\mimp<cr>0/\\mimp<cr>h
 " Add label, delete premise and implication, replace to BinaryInfC
-nnoremap <leader>ie yypO\RightLabel{$\mimp$E}<esc>j0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
+nnoremap <leader>ie yyp:call AddElimLabel("\\mimp")<cr>j0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
 
 " Add label, add existence before statement, add parentheses around statement,
 " replace to UnaryInfC
-nnoremap <leader>ei yypO\RightLabel{$\exists$I}<esc>j0f$a\exists_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f(
+nnoremap <leader>ei yyp:call AddIntroLabel("\\exists")<cr>j0f$a\exists_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f(
 " Create the assumption, remove parentheses, add discharge brackets
 nnoremap <leader>ea yyp/\\exists<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f{a[<esc>$i]<esc>0f$l
 " Add label, restate as BinaryInfC
-nnoremap <leader>ee yypO\RightLabel{$\exists$E}<esc>j:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
+nnoremap <leader>ee yyp:call AddElimLabel("\\exists")<cr>j:call ChangeC("BinaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
 
 " Add label, add forall before statement, add parentheses around statement,
 " replace to UnaryInfC
-nnoremap <leader>fi yypO\RightLabel{$\forall$I}<esc>j0f$a\forall_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f(
+nnoremap <leader>fi yyp:call AddIntroLabel("\\forall")<cr>j0f$a\forall_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f(
 " Add label, delete forall, delete parentheses if they exist, replace to
 " UnaryInfC
-nnoremap <leader>fe yypO\RightLabel{$\forall$E}<esc>j0/\\forall<cr>dW0:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
+nnoremap <leader>fe yyp:call AddElimLabel("\\forall")<cr>j0/\\forall<cr>dW0:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>f$l
 
 " Add label, add negation, remove implies bottom, replace to UnaryInfC
-nnoremap <leader>ni yypO\RightLabel{$\lnot$I}<esc>j0f$a\lnot <esc>$? \\mimp \\bot<cr>dt$:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\lnot<cr>El
+nnoremap <leader>ni yyp:call AddIntroLabel("\\lnot")<cr>j0f$a\lnot <esc>$? \\mimp \\bot<cr>dt$:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0/\\lnot<cr>El
 " Add lable, remove lnot, add implies bottom, replace to UnaryInfC
-nnoremap <leader>ne yypO\RightLabel{$\lnot$E}<esc>j0/\\lnot<cr>xdw$F$i \mimp \bot<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
+nnoremap <leader>ne yyp:call AddElimLabel("\\lnot")<cr>j0/\\lnot<cr>xdw$F$i \mimp \bot<esc>:call ChangeC("UnaryInfC")<cr>:s/\[\(\$.*\$\)\]/\1/e<cr>0f$l
 
 
 nnoremap <leader>ax o\AxiomC{[$$]}<esc>hhi
