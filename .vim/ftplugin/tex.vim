@@ -36,7 +36,7 @@ nnoremap <leader>di0 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInf
 nnoremap <leader>di1 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInfC")<cr>0f$a \mor <esc>F$l
 " Create the assumptions, remove parentheses
 nnoremap <leader>da yy2p:.,.+1call ChangeC("AxiomC")<cr>k:s/ *\\mor.*\$/$/<cr>j:s/\$.*\\mor */$/<cr>:.-1,.call TrimParen()<cr>k
-" Add label, restate as TrinaryInfC
+" Restate as TrinaryInfC
 nnoremap <leader>de yyp:call AddElimLabel("\\msor")<cr>:call ChangeC("TrinaryInfC")<cr>f$l
 
 
