@@ -8,11 +8,18 @@ nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 " Remove discharge brackets :s/\[\(\$.*\$\)\]/\1/e<cr> (possibly)
 
 function ChangeC(newtype)
+	" Set axiom type
 	s/AxiomC\|UnaryInfC\|BinaryInfC\|TrinaryInfC/\=a:newtype/
+	" Remove any discharge brackets
 	s/\[\(\$.*\$\)\]/\1/e
+	" Add (back) discharge brackets for axioms
 	if a:newtype == 'AxiomC'
 		s/\\AxiomC{\(.*\)}/\\AxiomC{[\1]}/
 	endif
+endfunction
+
+function TrimParen()
+	s/\$(\(.*\))\$/$\1$/e
 endfunction
 
 function AddIntroLabel(symbol)
