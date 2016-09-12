@@ -30,15 +30,15 @@ function AddElimLabel(symbol)
 	execute "normal! O\RightLabel{$" . a:symbol . "$E}\<esc>j"
 endfunction
 
-" Add label, add or on the right side
-nnoremap <leader>di0 yyp:call AddIntroLabel("\\msor")<cr>$F$i \mor <esc>:call ChangeC("UnaryInfC")<cr>0/\\mor<cr>W
-" Add label, add or on the left side
-nnoremap <leader>di1 yyp:call AddIntroLabel("\\msor")<cr>0f$a \mor <esc>:call ChangeC("UnaryInfC")<cr>0/\\mor<cr>h
-" Create the assumptions, remove parentheses, add discharge brackets
-" Currently broken
-nnoremap <leader>da yy2p0f$ld/\\mor<cr>xdw:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>j$F$d? \\?\\mor<cr>:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>
+" Add \mor on the right side
+nnoremap <leader>di0 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInfC")<cr>$F$i \mor <esc>l
+" Add \mor on the left side
+nnoremap <leader>di1 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInfC")<cr>0f$a \mor <esc>F$l
+" Create the assumptions, remove parentheses
+nnoremap <leader>da yy2p:.,.+1call ChangeC("AxiomC")<cr>k:s/ *\\mor.*\$/$/<cr>j:s/\$.*\\mor */$/<cr>:.-1,.call TrimParen()<cr>k
 " Add label, restate as TrinaryInfC
 nnoremap <leader>de yyp:call AddElimLabel("\\msor")<cr>:call ChangeC("TrinaryInfC")<cr>f$l
+
 
 " Add label, add and on the right side
 nnoremap <leader>ci0 yyp:call AddIntroLabel("\\msand")<cr>$F$i \mand <esc>:call ChangeC("UnaryInfC")<cr>0/\\mand<cr>W
