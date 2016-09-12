@@ -5,8 +5,6 @@ nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 
-" Remove discharge brackets :s/\[\(\$.*\$\)\]/\1/e<cr> (possibly)
-
 function ChangeC(newtype)
 	" Set axiom type
 	s/AxiomC\|UnaryInfC\|BinaryInfC\|TrinaryInfC/\=a:newtype/
