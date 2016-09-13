@@ -55,7 +55,7 @@ nnoremap <leader>ie yyp:call AddElimLabel("\\mimp")<cr>0f$ld/\\mimp<cr>dW:s/\$(\
 " replace to UnaryInfC
 nnoremap <leader>ei yyp:call AddIntroLabel("\\exists")<cr>0f$a\exists_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>0f(
 " Create the assumption, remove parentheses, add discharge brackets
-nnoremap <leader>ea yyp/\\exists<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>0f{a[<esc>$i]<esc>0f$l
+nnoremap <leader>ea yyp/\\exists<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>0f$l
 " Add label, restate as BinaryInfC
 nnoremap <leader>ee yyp:call AddElimLabel("\\exists")<cr>:call ChangeC("BinaryInfC")<cr>0f$l
 
