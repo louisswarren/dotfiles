@@ -21,11 +21,11 @@ function TrimParen()
 endfunction
 
 function AddIntroLabel(symbol)
-	execute "normal! O\RightLabel{$" . a:symbol . "$I}\<esc>j"
+	execute "normal! O\\RightLabel{$" . a:symbol . "$I}\<esc>j"
 endfunction
 
 function AddElimLabel(symbol)
-	execute "normal! O\RightLabel{$" . a:symbol . "$E}\<esc>j"
+	execute "normal! O\\RightLabel{$" . a:symbol . "$E}\<esc>j"
 endfunction
 
 " Add \mor on the right side
