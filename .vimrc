@@ -26,8 +26,8 @@ set t_Co=256
 
 " Colorscheme
 syntax enable
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme PaperColor
 
 set cursorline
 set number
