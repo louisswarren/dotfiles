@@ -16,10 +16,10 @@ compinit
 autoload -Uz colors
 colors
 
-PROMPT="%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m%{$reset_color%}:%~$ "
+PROMPT="%{$fg_bold[green]%}%n%{$reset_color%}@%{$fg_bold[red]%}%m%{$reset_color%}:%{$fg[magenta]%}%~%{$reset_color%}$ "
 RPROMPT="%(1j,%{$fg_bold[blue]%}[%{$fg_bold[red]%}%j%{$fg_bold[blue]%}]%{$reset_color%},)"
-zle_highlight=(default:bold)
-#zle_highlight=()
+#zle_highlight=(default:bold)
+zle_highlight=()
 
 alias ls='ls --color=auto'
 
