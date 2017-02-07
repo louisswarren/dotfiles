@@ -5,7 +5,7 @@ nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 nnoremap <leader>$ ?\$<cr>lc/\$<cr>
 
-function ChangeC(newtype)
+function! ChangeC(newtype)
 	" Set axiom type
 	s/AxiomC\|UnaryInfC\|BinaryInfC\|TrinaryInfC/\=a:newtype/
 	" Remove any discharge brackets
@@ -16,15 +16,15 @@ function ChangeC(newtype)
 	endif
 endfunction
 
-function TrimParen()
+function! TrimParen()
 	s/\$(\(.*\))\$/$\1$/e
 endfunction
 
-function AddIntroLabel(symbol)
+function! AddIntroLabel(symbol)
 	execute "normal! O\\RightLabel{$" . a:symbol . "$I}\<esc>j"
 endfunction
 
-function AddElimLabel(symbol)
+function! AddElimLabel(symbol)
 	execute "normal! O\\RightLabel{$" . a:symbol . "$E}\<esc>j"
 endfunction
 
