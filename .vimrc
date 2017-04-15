@@ -88,6 +88,12 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
+" Use j and k like a human on wrapped lines
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
 " Cycle through tabs
 noremap <F7> :tabprev<CR>
 noremap <F8> :tabnext<CR>
