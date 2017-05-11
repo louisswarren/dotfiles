@@ -37,18 +37,35 @@
 
 #Volume Up
 "pamixer --increase 5"
-    m:0x10 + c:123
-    Mod2 + XF86AudioRaiseVolume 
+   XF86AudioRaiseVolume
 
 #Volume Down
 "pamixer --decrease 5"
-    m:0x10 + c:122
-    Mod2 + XF86AudioLowerVolume 
+   XF86AudioLowerVolume
 
 #Mute
 "pamixer --toggle-mute"
-    m:0x10 + c:121
-    Mod2 + XF86AudioMute 
+   XF86AudioMute
+
+#Music
+"spotify"
+   XF86Tools
+
+#Previous
+"playerctl previous"
+   XF86AudioPrev
+
+#Next
+"playerctl next"
+   XF86AudioNext
+
+#Play/Pause
+"playerctl play-pause"
+   XF86AudioPlay
+
+#Remark
+"urxvt"
+   XF86Calculator
 
 #
 # End of xbindkeys configuration
