@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
-set $super Mod4
+set $super Mod1+Shift
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -166,3 +166,16 @@ smart_borders on
 exec --no-startup-id redshift-gtk
 
 bindsym $super+w exec "chromium"
+
+workspace 1 output DVI-0
+workspace 2 output DVI-1
+workspace 3 output DVI-0
+workspace 4 output DVI-1
+workspace 5 output DVI-0
+workspace 6 output DVI-1
+workspace 7 output DVI-0
+workspace 8 output DVI-1
+workspace 9 output DVI-0
+workspace 10 output DVI-1
+
+for_window [class="Spotify"] move to workspace 9
