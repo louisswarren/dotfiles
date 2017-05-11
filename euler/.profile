@@ -1,4 +1,4 @@
-PATH=$PATH:~/bin
+export PATH=$PATH:~/bin
 
 alias vim='gvim -v'
 alias diff='diff --color=auto'

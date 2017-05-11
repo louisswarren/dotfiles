@@ -1,3 +1,7 @@
 ./.fehbg &
 ./bin/msens 0.5 &
-i3
+xrdb ~/.Xresources &
+xmodmap ~/.Xmodmap &
+xbindkeys &
+numlockx &
+exec i3
