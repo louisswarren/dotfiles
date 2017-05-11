@@ -1,5 +1,4 @@
-
-URxvt.font: xft:monospace:size=12
+URxvt.font: xft:monospace:size=11
 URxvt.scrollBar: false
 
 ! Tomorrow
@@ -40,3 +39,9 @@ URxvt.scrollBar: false
 ! white
 *.color7:       #c5c8c6
 *.color15:      #ffffff
+
+
+! Colored man pages
+URxvt.colorIT:      #87af5f
+URxvt.colorBD:      #d7d7d7
+URxvt.colorUL:      #87afd7
