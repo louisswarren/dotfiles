@@ -67,5 +67,17 @@
 "urxvt"
    XF86Calculator
 
+#Suspend
+"sudo pm-suspend"
+   Control+Shift+Alt+Mod4 + XF86Calculator
+
+#Copy
+"xvkbd -xsendevent -text '\[XF86Copy]'"
+   b:8
+
+#Paste
+"xvkbd -xsendevent -text '\[XF86Paste]'"
+   b:9
+
 #
 # End of xbindkeys configuration
