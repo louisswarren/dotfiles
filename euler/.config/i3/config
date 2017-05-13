@@ -160,16 +160,17 @@ bar {
         status_command i3status
 }
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 4
 
 gaps inner 10
+gaps outer -5
 smart_gaps on
 smart_borders on
 
 
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift
 
-bindsym $super+w exec "chromium"
+bindsym $super+w exec "firefox-beta"
 
 workspace 1 output DVI-0
 workspace 2 output DVI-1
@@ -183,3 +184,8 @@ workspace $ws9 output DVI-0
 workspace 10 output DVI-1
 
 for_window [class="Spotify"] move to workspace $ws9
+
+focus_follows_mouse no
+
+client.focused  #444957d0  #30333dd0  #5c6063d0  #30333dd0  #FF4500
+
