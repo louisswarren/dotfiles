@@ -43,6 +43,14 @@
 "pamixer --decrease 5"
    XF86AudioLowerVolume
 
+#Volume Up +
+"pamixer --increase 5 --allow-boost"
+   Control+Shift+XF86AudioRaiseVolume
+
+#Volume Down +
+"pamixer --decrease 5 --allow-boost"
+   Control+Shift+XF86AudioLowerVolume
+
 #Mute
 "pamixer --toggle-mute"
    XF86AudioMute
@@ -78,6 +86,10 @@
 #Paste
 "xvkbd -xsendevent -text '\[XF86Paste]'"
    b:9
+
+#Printscreen
+"printscreen"
+   Print
 
 #
 # End of xbindkeys configuration

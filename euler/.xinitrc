@@ -1,5 +1,5 @@
 ./.fehbg &
-./bin/msens 0.5 &
+./bin/msens 0.45 &
 xrdb ~/.Xresources &
 xmodmap ~/.Xmodmap &
 xbindkeys &
