@@ -98,12 +98,12 @@ set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
-set $ws5 "5"
+set $ws5 "5:Communication"
 set $ws6 "6"
 set $ws7 "7:youtube"
-set $ws8 "8"
+set $ws8 "8:video"
 set $ws9 "9:music"
-set $ws10 "10:video"
+set $ws10 "10:fullscreen"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -192,9 +192,12 @@ workspace $ws9 output DVI-0
 workspace $ws10 output DVI-1
 
 for_window [class="Spotify"] move to workspace $ws9
-for_window [class="Vlc"] move to workspace $ws10
+for_window [class="Vlc"] move to workspace $ws8
+for_window [class="Chromium"] move to workspace $ws5
+for_window [class="Discord"] move to workspace $ws5
 
 focus_follows_mouse no
 
 client.focused  #444957d0  #30333dd0  #5c6063d0  #30333dd0  #FF4500
 
+bindsym $super+f move container to workspace $ws10; workspace $ws10
