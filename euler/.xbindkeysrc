@@ -36,7 +36,7 @@
 
 
 #Volume Up
-"pamixer --increase 5"
+"pamixer --increase 5 --allow-boost"
    XF86AudioRaiseVolume
 
 #Volume Down
@@ -44,7 +44,7 @@
    XF86AudioLowerVolume
 
 #Volume Up +
-"pamixer --increase 5 --allow-boost"
+"pamixer --increase 5"
    Control+XF86AudioRaiseVolume
 
 #Mute
