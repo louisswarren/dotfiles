@@ -43,13 +43,13 @@
 "pamixer --decrease 5 --allow-boost"
    XF86AudioLowerVolume
 
-#Volume Up +
-"pamixer --increase 5"
-   Control+XF86AudioRaiseVolume
+#Mute Limit
+"pamixer --toggle-mute; pamixer --decrease 5;  pamixer --increase 5"
+   XF86AudioMute
 
 #Mute
 "pamixer --toggle-mute"
-   XF86AudioMute
+   Shift + XF86AudioMute
 
 #Music
 "spotify"

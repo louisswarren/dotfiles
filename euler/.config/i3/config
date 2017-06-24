@@ -192,8 +192,7 @@ workspace $ws9 output DVI-0
 workspace $ws10 output DVI-1
 
 for_window [class="Spotify"] move to workspace $ws9
-for_window [class="Vlc"] move to workspace $ws8
-for_window [class="Chromium"] move to workspace $ws5
+#for_window [class="Vlc"] move to workspace $ws8
 for_window [class="Discord"] move to workspace $ws5
 
 focus_follows_mouse no
