@@ -17,6 +17,10 @@ filetype plugin on
 let g:tex_flavor='latex'
 
 set t_Co=256
+let base16colorspace=256
+
+" Store swap files elsewhere
+set directory^=$HOME/.vim/tmp//
 
 
 """"""""""""""
@@ -25,8 +29,11 @@ set t_Co=256
 
 " Colorscheme
 syntax enable
-set background=light
-colorscheme PaperColor
+set background=dark
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 set cursorline
 set number

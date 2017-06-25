@@ -1,5 +1,5 @@
 nnoremap <f10> :w! ~/minlog/.clarinet<cr>
-nnoremap <C-f10> :1,.w! ~/minlog/.clarinet<cr>
+nnoremap <leader><f10> :1,.w! ~/minlog/.clarinet<cr>
 nnoremap <f9> :.w! ~/minlog/.clarinet<cr>j
 inoremap <f9> <esc>:.w! ~/minlog/.clarinet<cr>A<cr>
 vnoremap <f9> :'<,'>w! ~/minlog/.clarinet<cr>
