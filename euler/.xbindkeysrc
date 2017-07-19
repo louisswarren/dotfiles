@@ -44,7 +44,7 @@
    XF86AudioLowerVolume
 
 #Mute Limit
-"pamixer --toggle-mute; pamixer --decrease 5;  pamixer --increase 5"
+"pamixer --toggle-mute; pamixer --increase 0"
    XF86AudioMute
 
 #Mute

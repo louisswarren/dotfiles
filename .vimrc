@@ -108,7 +108,7 @@ noremap <F8> :tabnext<CR>
 nnoremap <F10> :!make<CR>
 
 " Clear highlight search
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <leader>l :nohl<CR><leader>l
 
 " Easier centering
 nnoremap <space> zz
@@ -119,10 +119,16 @@ noremap <Down> 2<C-e>
 
 
 " Copy and paste
-nnoremap  <leader>c "+y
-vnoremap  <leader>c "+y
+nnoremap <leader>c "+y
+vnoremap <leader>c "+y
 nnoremap <leader>v "+p
 nnoremap <leader>V "+P
+
+" Splits for emacs haters
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 
 """"""""
