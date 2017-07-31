@@ -1,0 +1,3 @@
+keycode 66 = Alt_L
+clear Lock
+add Mod1 = Alt_L
