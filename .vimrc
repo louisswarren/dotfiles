@@ -4,7 +4,7 @@
 
 call plug#begin('~/.vim/plugged/')
 Plug 'lervag/vimtex'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
