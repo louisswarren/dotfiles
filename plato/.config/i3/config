@@ -166,6 +166,9 @@ bindsym $mod+a mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+		colors {
+			focused_workspace  #4c7899 #2a3448 #ffffff
+		}
 }
 
 for_window [class="^.*"] border pixel 3
@@ -186,6 +189,7 @@ for_window [class="Discord"] move to workspace $ws5
 
 focus_follows_mouse no
 
-client.focused  #444957d0  #30333dd0  #5c6063d0  #30333dd0  #FF4500
+client.focused  #444957d0  #30333dd0  #5c6063d0  #30333dd0 #f0a000d0
+client.unfocused  #444957d0  #30333dd0  #5c6063d0  #30333dd0 #061229d0
 
 bindsym $super+f move container to workspace $ws10; workspace $ws10
