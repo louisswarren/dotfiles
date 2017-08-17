@@ -14,4 +14,6 @@ nnoremap <f11> :call UndoMinlog()<cr>k
 inoremap <f11> <esc>:call UndoMinlog()<cr>kA
 
 set sw=2
+set ts=2
+set sts=2
 set et
