@@ -5,6 +5,7 @@
 call plug#begin('~/.vim/plugged/')
 Plug 'lervag/vimtex'
 Plug 'chriskempson/base16-vim'
+Plug 'derekelkins/agda-vim'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
