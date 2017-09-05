@@ -31,7 +31,7 @@ imap <buffer> \_+ ₊
 imap <buffer> \_- ₋
 imap <buffer> \_= ₌
 imap <buffer> \_( ₍
-""imap <buffer> \_) ₎
+imap <buffer> \_) ₎
 
 " Arrows
 imap <buffer> -> →
@@ -40,7 +40,7 @@ imap <buffer> <--> ↔
 imap <buffer> ==> ⇒
 imap <buffer> <== ⇐
 imap <buffer> <==> ⇔
-"
+
 " Symbols from mathematics and logic, LaTeX style
 imap <buffer> \forall ∀
 imap <buffer> \exists ∃
@@ -144,3 +144,8 @@ imap <buffer> \Omega Ω
 
 nnoremap <f9> :!agda --vim %<cr>
 set expandtab
+set ts=2
+set sw=2
+set sts=2
+
+imap <buffer> \^ ∧
