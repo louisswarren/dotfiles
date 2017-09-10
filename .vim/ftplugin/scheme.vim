@@ -4,6 +4,8 @@ nnoremap <f9> :.w! ~/minlog/.clarinet<cr>j
 inoremap <f9> <esc>:.w! ~/minlog/.clarinet<cr>A<cr>
 vnoremap <f9> :'<,'>w! ~/minlog/.clarinet<cr>
 
+nnoremap <f6> :!rm ~/minlog/.clarinet<cr>
+
 function! UndoMinlog()
 	redir! >~/minlog/.clarinet
 	echo "(undo)"

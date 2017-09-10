@@ -149,3 +149,5 @@ set sw=2
 set sts=2
 
 imap <buffer> \^ ∧
+imap <buffer> \or ∨
+imap <buffer> \eq ≡
