@@ -29,42 +29,42 @@ function! AddElimLabel(symbol)
 endfunction
 
 " Add \mor on the right side
-nnoremap <leader>di0 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInfC")<cr>$F$i \mor <esc>l
+nnoremap <leader>di0 yyp:call AddIntroLabel("nddi")<cr>:call ChangeC("UnaryInfC")<cr>$F$i \mor <esc>l
 " Add \mor on the left side
-nnoremap <leader>di1 yyp:call AddIntroLabel("\\msor")<cr>:call ChangeC("UnaryInfC")<cr>0f$a \mor <esc>F$l
+nnoremap <leader>di1 yyp:call AddIntroLabel("nddi")<cr>:call ChangeC("UnaryInfC")<cr>0f$a \mor <esc>F$l
 " Create the assumptions, remove parentheses
 nnoremap <leader>da yy2p:.,.+1call ChangeC("AxiomC")<cr>k:s/ *\\mor.*\$/$/<cr>j:s/\$.*\\mor */$/<cr>:.-1,.call TrimParen()<cr>k
 " Restate as TrinaryInfC
-nnoremap <leader>de yyp:call AddElimLabel("\\msor")<cr>:call ChangeC("TrinaryInfC")<cr>f$l
+nnoremap <leader>de yyp:call AddElimLabel("ndde")<cr>:call ChangeC("TrinaryInfC")<cr>f$l
 
 
 " Add label, add and on the right side
-nnoremap <leader>ci0 yyp:call AddIntroLabel("\\msand")<cr>$F$i \mand <esc>:call ChangeC("UnaryInfC")<cr>0/\\mand<cr>W
+nnoremap <leader>ci0 yyp:call AddIntroLabel("ndci")<cr>$F$i \mand <esc>:call ChangeC("UnaryInfC")<cr>0/\\mand<cr>W
 " Add label, add and on the left side
-nnoremap <leader>ci1 yyp:call AddIntroLabel("\\msand")<cr>0f$a \mand <esc>:call ChangeC("UnaryInfC")<cr>0/\\mand<cr>h
+nnoremap <leader>ci1 yyp:call AddIntroLabel("ndci")<cr>0f$a \mand <esc>:call ChangeC("UnaryInfC")<cr>0/\\mand<cr>h
 " Add label, restate as BinaryInfC
-nnoremap <leader>ce yyp:call AddElimLabel("\\msand")<cr>:call ChangeC("BinaryInfC")<cr>0f$l
+nnoremap <leader>ce yyp:call AddElimLabel("ndce")<cr>:call ChangeC("BinaryInfC")<cr>0f$l
 
 " Add label, add implication before statement,
 " replace to UnaryInfC
-nnoremap <leader>ii yyp:call AddIntroLabel("\\mimp")<cr>0f$a \mimp <esc>:call ChangeC("UnaryInfC")<cr>0/\\mimp<cr>0/\\mimp<cr>h
+nnoremap <leader>ii yyp:call AddIntroLabel("ndii")<cr>0f$a \mimp <esc>:call ChangeC("UnaryInfC")<cr>0/\\mimp<cr>0/\\mimp<cr>h
 " Add label, delete premise and implication, replace to BinaryInfC
-nnoremap <leader>ie yyp:call AddElimLabel("\\mimp")<cr>0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("BinaryInfC")<cr>f$l
+nnoremap <leader>ie yyp:call AddElimLabel("ndie")<cr>0f$ld/\\mimp<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("BinaryInfC")<cr>f$l
 
 " Add label, add existence before statement, add parentheses around statement,
 " replace to UnaryInfC
-nnoremap <leader>ei yyp:call AddIntroLabel("\\exists")<cr>0f$a\exists_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>0f(
+nnoremap <leader>ei yyp:call AddIntroLabel("ndei")<cr>0f$a\exists_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>0f(
 " Create the assumption, remove parentheses, add discharge brackets
 nnoremap <leader>ea yyp/\\exists<cr>dW:s/\$(\(.*\))\$/$\1$/e<cr>:s/UnaryInfC\\|BinaryInfC\\|TrinaryInfC/AxiomC/e<cr>0f$l
 " Add label, restate as BinaryInfC
-nnoremap <leader>ee yyp:call AddElimLabel("\\exists")<cr>:call ChangeC("BinaryInfC")<cr>0f$l
+nnoremap <leader>ee yyp:call AddElimLabel("ndee")<cr>:call ChangeC("BinaryInfC")<cr>0f$l
 
 " Add label, add forall before statement, add parentheses around statement,
 " replace to UnaryInfC
-nnoremap <leader>fi yyp:call AddIntroLabel("\\forall")<cr>0f$a\forall_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>0f(
+nnoremap <leader>fi yyp:call AddIntroLabel("ndfi")<cr>0f$a\forall_x (<esc>f$i)<esc>:call ChangeC("UnaryInfC")<cr>0f(
 " Add label, delete forall, delete parentheses if they exist, replace to
 " UnaryInfC
-nnoremap <leader>fe yyp:call AddElimLabel("\\forall")<cr>0/\\forall<cr>dW0:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("UnaryInfC")<cr>f$l
+nnoremap <leader>fe yyp:call AddElimLabel("ndfe")<cr>0/\\forall<cr>dW0:s/\$(\(.*\))\$/$\1$/e<cr>:call ChangeC("UnaryInfC")<cr>f$l
 
 " Add label, add negation, remove implies bottom, replace to UnaryInfC
 nnoremap <leader>ni yyp:call AddIntroLabel("\\lnot")<cr>0f$a\lnot <esc>$? \\mimp \\bot<cr>dt$:call ChangeC("UnaryInfC")<cr>0/\\lnot<cr>El
