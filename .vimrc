@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged/')
 Plug 'lervag/vimtex'
 Plug 'chriskempson/base16-vim'
 Plug 'derekelkins/agda-vim'
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
@@ -70,6 +71,7 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set shiftround
 
 " Scrolling
 set scrolloff=4
@@ -145,3 +147,12 @@ endif
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+
+
+
+" This is really dirty; takes a line like
+"       'hello\\world\thow are you?'
+" and puts
+" hello\world	how are you?
+" onto the XA_CLIPBOARD (for which there are mappings above)
+nnoremap <f3> :.w !python3 -c 'print(__import__("sys").stdin.buffer.read().decode("unicode_escape").strip()[1:-1])' <bar> xclip -selection clipboard<cr>
