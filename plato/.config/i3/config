@@ -183,6 +183,17 @@ exec --no-startup-id redshift
 
 bindsym $super+w exec "firefox"
 
+workspace $ws1 output LVDS-1
+workspace $ws2 output LVDS-1
+workspace $ws3 output LVDS-1
+workspace $ws4 output LVDS-1
+workspace $ws5 output LVDS-1
+workspace $ws6 output LVDS-1
+workspace $ws7 output LVDS-1
+workspace $ws8 output LVDS-1
+workspace $ws9 output LVDS-1
+workspace $ws10 output VGA-1
+
 for_window [class="Spotify"] move to workspace $ws9
 #for_window [class="Vlc"] move to workspace $ws8
 for_window [class="Discord"] move to workspace $ws5
@@ -193,3 +204,5 @@ client.focused  #444957d0  #30333dd0  #5c6063d0  #30333dd0 #f0a000d0
 client.unfocused  #444957d0  #30333dd0  #5c6063d0  #30333dd0 #061229d0
 
 bindsym $super+f move container to workspace $ws10; workspace $ws10
+
+
