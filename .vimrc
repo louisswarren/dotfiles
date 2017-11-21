@@ -40,8 +40,6 @@ endif
 set cursorline
 set number
 
-set hlsearch
-
 
 """""""""""""""
 " Visual Cues "
@@ -83,6 +81,7 @@ set autochdir
 set ignorecase
 set smartcase
 set incsearch
+set nohlsearch
 
 
 """"""""""""
@@ -111,7 +110,7 @@ noremap <F8> :tabnext<CR>
 nnoremap <F10> :!make<CR>
 
 " Clear highlight search
-nnoremap <silent> <leader>l :nohl<CR><leader>l
+nnoremap <silent> <F2> :nohl<CR><F2>
 
 " Easier centering
 nnoremap <space> zz
@@ -128,10 +127,16 @@ nnoremap <leader>v "+p
 nnoremap <leader>V "+P
 
 " Splits for emacs haters
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+nnoremap <C-h> <C-W><C-H>
+
+" Doesn't work
+nnoremap <S-Up> <C-W>-
+nnoremap <S-Down> <C-W>+
+nnoremap <S-Left> <C-W><
+nnoremap <S-Right> <C-W>>
 
 
 """"""""
