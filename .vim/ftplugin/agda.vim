@@ -151,3 +151,14 @@ set sts=2
 imap <buffer> \^ ∧
 imap <buffer> \or ∨
 imap <buffer> \eq ≡
+imap <buffer> \dju ⊎
+
+
+
+
+" Handy binds
+nnoremap <leader>h /{![^!]*!}<cr>3l:nohl<cr>
+nnoremap <leader>H F{?{![^!]*!}<cr>3l:nohl<cr>
+nnoremap <leader>/ /?<cr>:nohl<cr>
+nnoremap <leader>? ??<cr>:nohl<cr>
+
