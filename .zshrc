@@ -111,6 +111,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 bindkey -M viins 'jk' vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
 
 alias vim='gvim -vp'
 alias diff='diff --color=auto'
