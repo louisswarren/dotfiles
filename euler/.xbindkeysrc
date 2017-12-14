@@ -67,8 +67,8 @@
 "playerctl play-pause"
    XF86AudioPlay
 
-#Remark
-"thunar"
+#File manager
+"nemo"
    XF86Calculator
 
 #Suspend
