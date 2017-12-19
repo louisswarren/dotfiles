@@ -19,29 +19,42 @@ def run(*cmdlist):
     return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
 
 def get_status():
-    return run('playerctl', 'status')[:-1]
+    status = run('playerctl', 'status')[:-1]
+    if status in ('Playing', 'Paused'):
+        return status
+    return ''
 
 def get_metadata():
     gvariant_data = run('playerctl', 'metadata')
     return dict(re.findall(gvariant_re, gvariant_data))
 
-def get_value(metadata, key, regex):
-    return re.match(regex, metadata[key]).group('value')
+def extract_title(metadata):
+    return re.match(string_re, metadata['xesam:title']).group('value')
+
+def extract_first_artist(metadata):
+    return re.match(first_list_re, metadata['xesam:artist']).group('value')
 
 
 class Py3status:
     def spotbar(self):
-        status = get_status()
-        if status == 'Playing':
+        params = {'status': get_status()}
+
+        if params['status'] == 'Playing':
             metadata = get_metadata()
-            title = get_value(metadata, 'xesam:title', string_re)
-            artist = get_value(metadata, 'xesam:artist', first_list_re)
-            full_text = ' {} - {} '.format(title, artist)
-        elif status == 'Paused':
-            full_text = ' Paused '
-        else:
-            full_text = ''
+            params['title'] = extract_title(metadata)
+            params['artist'] = extract_first_artist(metadata)
+
+        text_format = "[ {artist} / {title} ]|[ {status} ]"
         return {
-            'full_text': full_text,
+            'full_text': self.py3.safe_format(text_format, params),
             'cached_until': self.py3.time_in(seconds=1)
         }
+
+    def on_click(self, event):
+        if event['button'] == 1:
+            run('playerctl', 'play-pause')
+
+
+if __name__ == '__main__':
+    from py3status.module_test import module_test
+    module_test(Py3status)
