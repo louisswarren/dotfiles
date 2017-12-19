@@ -10,9 +10,9 @@ import subprocess
 # improving until it causes a problem.
 
 # Key value pairs from GVariant data
-gvariant_re   = r"'(?P<key>[\w:]+)': <(?P<value>.*?)>"
+gvariant_re = r"'(?P<key>[\w:]+)': <(?P<value>.*?)>"
 # Strings with potentially mismatched quote marks
-string_re     = r"('|\")(?P<value>.*)('|\")"
+string_re = r"('|\")(?P<value>.*)('|\")"
 # First value in a list (must be a string)
 first_list_re = r"\[('|\")(?P<value>.*?)('|\")(,|\]).*"
 
