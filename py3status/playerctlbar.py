@@ -1,4 +1,4 @@
-# py3status module for Spotify using playerctl
+# py3status module for playerctl
 
 import re
 import subprocess
@@ -28,15 +28,20 @@ def get_metadata():
     gvariant_data = run('playerctl', 'metadata')
     return dict(re.findall(gvariant_re, gvariant_data))
 
+def try_extract(regex, metadata, key):
+    try:
+        return re.match(regex, metadata[key]).group('value')
+    except Exception:
+        return ''
+
 def extract_title(metadata):
-    return re.match(string_re, metadata['xesam:title']).group('value')
+    return try_extract(string_re, metadata, 'xesam:title')
 
 def extract_first_artist(metadata):
-    return re.match(first_list_re, metadata['xesam:artist']).group('value')
-
+    return try_extract(first_list_re, metadata, 'xesam:artist')
 
 class Py3status:
-    def spotbar(self):
+    def playerctlbar(self):
         params = {'status': get_status()}
 
         if params['status'] == 'Playing':
@@ -44,7 +49,7 @@ class Py3status:
             params['title'] = extract_title(metadata)
             params['artist'] = extract_first_artist(metadata)
 
-        text_format = "[ {artist} / {title} ]|[ {status} ]"
+        text_format = "[[ {artist} /] {title} ]|[ {status} ]"
         return {
             'full_text': self.py3.safe_format(text_format, params),
             'cached_until': self.py3.time_in(seconds=1)
