@@ -148,7 +148,7 @@ set ts=2
 set sw=2
 set sts=2
 
-imap <buffer> \^ ∧
+imap <buffer> \and ∧
 imap <buffer> \or ∨
 imap <buffer> \eq ≡
 imap <buffer> \dju ⊎
