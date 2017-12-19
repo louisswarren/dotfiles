@@ -1,7 +1,6 @@
 # py3status module for Spotify using playerctl
 
 import re
-import sys
 import subprocess
 
 # In the absence of a GVariant parser, do some rudimentary parsing.
