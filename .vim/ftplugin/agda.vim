@@ -162,3 +162,6 @@ nnoremap <leader>H F{?{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>/ /?<cr>:nohl<cr>
 nnoremap <leader>? ??<cr>:nohl<cr>
 imap <buffer> \B 𝔹
+
+nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
+
