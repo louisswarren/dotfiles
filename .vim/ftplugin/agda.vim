@@ -148,13 +148,6 @@ set ts=2
 set sw=2
 set sts=2
 
-imap <buffer> \and ∧
-imap <buffer> \or ∨
-imap <buffer> \eq ≡
-imap <buffer> \dju ⊎
-
-
-
 
 " Handy binds
 nnoremap <leader>h /{![^!]*!}<cr>3l:nohl<cr>
@@ -165,3 +158,37 @@ imap <buffer> \B 𝔹
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 
+
+" My own imaps, because <leader> is annoying
+
+imap <buffer> land ∧
+imap <buffer> lor ∨
+imap <buffer> eq ≡
+imap <buffer> dju ⊎
+
+" Arrows
+imap <buffer> to<space> →<space>
+imap <buffer> limp ⇒
+
+imap <buffer> forall ∀
+imap <buffer> setminus ∖
+imap <buffer> nat ℕ
+imap <buffer> equiv ≡
+
+" Greek alphabet...
+imap <buffer> alpha α
+imap <buffer> beta β
+imap <buffer> gamma γ
+imap <buffer> delta δ
+imap <buffer> epsilon ε
+
+imap <buffer> Alpha Α
+imap <buffer> Beta Β
+imap <buffer> Gamma Γ
+imap <buffer> Delta Δ
+imap <buffer> Epsilon Ε
+
+imap <buffer> tst ⊢
+imap <buffer> Gamma1 Γ₁
+imap <buffer> Gamma2 Γ₂
+imap <buffer> Gamma3 Γ₃
