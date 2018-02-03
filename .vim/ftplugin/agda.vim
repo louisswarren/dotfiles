@@ -163,32 +163,42 @@ nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr
 
 imap <buffer> land ∧
 imap <buffer> lor ∨
-imap <buffer> eq ≡
 imap <buffer> dju ⊎
 
 " Arrows
 imap <buffer> to<space> →<space>
-imap <buffer> limp ⇒
+iabbrev limp ⇒
 
-imap <buffer> forall ∀
-imap <buffer> setminus ∖
-imap <buffer> nat ℕ
-imap <buffer> equiv ≡
+iabbrev <buffer> forall ∀
+iabbrev <buffer> setminus ∖
+imap <buffer> <leader>nat ℕ
+iabbrev <buffer> equiv ≡
 
 " Greek alphabet...
-imap <buffer> alpha α
-imap <buffer> beta β
-imap <buffer> gamma γ
-imap <buffer> delta δ
-imap <buffer> epsilon ε
+iabbrev <buffer> alpha α
+iabbrev <buffer> beta β
+iabbrev <buffer> gamma γ
+iabbrev <buffer> delta δ
+iabbrev <buffer> epsilon ε
 
-imap <buffer> Alpha Α
-imap <buffer> Beta Β
-imap <buffer> Gamma Γ
-imap <buffer> Delta Δ
-imap <buffer> Epsilon Ε
+iabbrev <buffer> Alpha Α
+iabbrev <buffer> Beta Β
+iabbrev <buffer> Gamma Γ
+iabbrev <buffer> Delta Δ
+iabbrev <buffer> Epsilon Ε
+iabbrev <buffer> Phi Φ
+iabbrev <buffer> Psi Ψ
 
 imap <buffer> tst ⊢
-imap <buffer> Gamma1 Γ₁
-imap <buffer> Gamma2 Γ₂
-imap <buffer> Gamma3 Γ₃
+iabbrev <buffer> Gamma1 Γ₁
+iabbrev <buffer> Gamma2 Γ₂
+iabbrev <buffer> Gamma3 Γ₃
+
+
+
+
+noreabbrev builtinbool open import Agda.Builtin.Bool
+noreabbrev builtinequality open import Agda.Builtin.Equality
+noreabbrev builtinlist open import Agda.Builtin.List
+noreabbrev builtinnat open import Agda.Builtin.Nat renaming (Nat to ℕ)
+noreabbrev builtinstring open import Agda.Builtin.String
