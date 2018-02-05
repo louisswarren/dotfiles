@@ -161,6 +161,7 @@ nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr
 
 " My own imaps, because <leader> is annoying
 
+imap <buffer> limp ⇒
 imap <buffer> land ∧
 imap <buffer> lor ∨
 imap <buffer> dju ⊎
@@ -169,10 +170,10 @@ imap <buffer> dju ⊎
 imap <buffer> to<space> →<space>
 iabbrev limp ⇒
 
-iabbrev <buffer> forall ∀
-iabbrev <buffer> setminus ∖
+imap <buffer> forall ∀
+imap <buffer> setminus ∖
 imap <buffer> <leader>nat ℕ
-iabbrev <buffer> equiv ≡
+imap <buffer> equiv ≡
 
 " Greek alphabet...
 imap <buffer> alpha α
