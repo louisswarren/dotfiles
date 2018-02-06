@@ -171,9 +171,11 @@ imap <buffer> to<space> →<space>
 iabbrev limp ⇒
 
 imap <buffer> forall ∀
+imap <buffer> exists ∃
 imap <buffer> setminus ∖
 imap <buffer> <leader>nat ℕ
 imap <buffer> equiv ≡
+imap <buffer> neg ¬
 
 " Greek alphabet...
 imap <buffer> alpha α
@@ -181,6 +183,7 @@ imap <buffer> beta β
 imap <buffer> gamma γ
 imap <buffer> delta δ
 imap <buffer> epsilon ε
+imap <buffer> lambda λ
 
 imap <buffer> Alpha Α
 imap <buffer> Beta Β
@@ -189,6 +192,7 @@ imap <buffer> Delta Δ
 imap <buffer> Epsilon Ε
 imap <buffer> Omega Ω
 imap <buffer> Phi Φ
+imap <buffer> Psi Ψ
 
 imap <buffer> tst ⊢
 imap <buffer> Gamma1 Γ₁
