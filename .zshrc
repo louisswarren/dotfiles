@@ -119,4 +119,4 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias clip='xclip -selection clipboard'
 
-alias gitslog='git --no-pager log --oneline -20'
+alias gitslog='git --no-pager log --decorate --oneline --graph -20'
