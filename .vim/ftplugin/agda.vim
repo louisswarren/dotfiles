@@ -1,3 +1,5 @@
+nnoremap <f1> :source $MYVIMRC<cr>:set ft=agda<cr>
+
 " Superscripts
 imap <buffer> ^0 ⁰
 imap <buffer> ^1 ¹
@@ -151,7 +153,7 @@ set sts=2
 
 " Handy binds
 nnoremap <leader>h /{![^!]*!}<cr>3l:nohl<cr>
-nnoremap <leader>H F{?{![^!]*!}<cr>3l:nohl<cr>
+nnoremap <leader>H ?{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>/ /?<cr>:nohl<cr>
 nnoremap <leader>? ??<cr>:nohl<cr>
 imap <buffer> \B 𝔹

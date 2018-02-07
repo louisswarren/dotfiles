@@ -143,6 +143,7 @@ nnoremap <S-Right> <C-W>>
 " gVim "
 """"""""
 
+" non-freeeeeeeeee
 if has("win32")
 	set guifont=DejaVu_Sans_Mono:h12:cANSI
 	set backspace=2
@@ -153,6 +154,12 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 
+
+"""""""""
+" Vimrc "
+"""""""""
+
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 
 " This is really dirty; takes a line like
