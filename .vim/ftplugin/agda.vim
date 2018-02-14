@@ -156,7 +156,7 @@ nnoremap <leader>h /{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>H ?{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>/ /?<cr>:nohl<cr>
 nnoremap <leader>? ??<cr>:nohl<cr>
-imap <buffer> \B 𝔹
+nnoremap <leader>d 0yWo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 
@@ -167,6 +167,7 @@ imap <buffer> limp ⇒
 imap <buffer> land ∧
 imap <buffer> lor ∨
 imap <buffer> dju ⊎
+imap <buffer> \B 𝔹
 
 " Arrows
 imap <buffer> to<space> →<space>
@@ -209,4 +210,3 @@ noreabbrev builtinequality open import Agda.Builtin.Equality
 noreabbrev builtinlist open import Agda.Builtin.List
 noreabbrev builtinnat open import Agda.Builtin.Nat renaming (Nat to ℕ)
 noreabbrev builtinstring open import Agda.Builtin.String
-
