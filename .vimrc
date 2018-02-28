@@ -93,9 +93,9 @@ inoremap jk <esc>
 
 " Semicolon to do colon commands
 nnoremap ; :
-nnoremap : ;
+nnoremap ;; ;
 vnoremap ; :
-vnoremap : ;
+vnoremap ;; ;
 
 " Use j and k like a human on wrapped lines
 noremap j gj
@@ -112,8 +112,9 @@ nnoremap <F10> :!make<CR>
 " Clear highlight search
 nnoremap <silent> <F2> :nohl<CR><F2>
 
-" Easier centering
-nnoremap <space> zz
+" Easier leader
+map <space> <leader>
+map <space> <leader>
 
 " Scroll using arrow keys
 noremap <Up> 2<C-y>
@@ -168,3 +169,5 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " hello\world	how are you?
 " onto the XA_CLIPBOARD (for which there are mappings above)
 nnoremap <f3> :.w !python3 -c 'print(__import__("sys").stdin.buffer.read().decode("unicode_escape").strip()[1:-1])' <bar> xclip -selection clipboard<cr>
+
+inoremap ;w <esc>:w<cr>

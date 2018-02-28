@@ -177,6 +177,7 @@ imap <buffer> forall ∀
 imap <buffer> exists ∃
 imap <buffer> setminus ∖
 imap <buffer> <leader>nat ℕ
+imap <buffer> posnat ℕ⁺
 imap <buffer> equiv ≡
 imap <buffer> neg ¬
 
@@ -187,6 +188,7 @@ imap <buffer> gamma γ
 imap <buffer> delta δ
 imap <buffer> epsilon ε
 imap <buffer> lambda λ
+imap <buffer> omega ω
 
 imap <buffer> Alpha Α
 imap <buffer> Beta Β
@@ -202,6 +204,7 @@ imap <buffer> Gamma1 Γ₁
 imap <buffer> Gamma2 Γ₂
 imap <buffer> Gamma3 Γ₃
 
+imap <buffer> \reduces ⊃
 imap <buffer> reduces ⊃
 
 
