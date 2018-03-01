@@ -6,4 +6,5 @@ xmodmap ~/.Xmodmap &
 xbindkeys &
 numlockx &
 xrandr --output DVI-1 --primary &
+udiskie &
 exec i3

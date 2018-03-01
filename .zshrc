@@ -120,4 +120,6 @@ alias ls='ls --color=auto'
 alias clip='xclip -selection clipboard'
 
 alias gitslog='git --no-pager log --decorate --oneline --graph -20'
+
+alias ll='ls -lAhF'
 alias okular='nohup okular'
