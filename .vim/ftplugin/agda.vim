@@ -144,6 +144,9 @@ imap <buffer> \Chi Χ
 imap <buffer> \Psi Ψ
 imap <buffer> \Omega Ω
 
+
+imap <buffer> \mid ∣
+
 nnoremap <f9> :!agda --vim %<cr>
 set expandtab
 set ts=2
