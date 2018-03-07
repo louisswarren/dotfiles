@@ -160,6 +160,7 @@ nnoremap <leader>d 0yWo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 
+imap <leader>div ÷
 
 " My own imaps, because <leader> is annoying
 
@@ -168,6 +169,7 @@ imap <buffer> land ∧
 imap <buffer> lor ∨
 imap <buffer> dju ⊎
 imap <buffer> \B 𝔹
+imap <buffer> approx ≈
 
 " Arrows
 imap <buffer> to<space> →<space>
@@ -179,7 +181,7 @@ imap <buffer> setminus ∖
 imap <buffer> <leader>nat ℕ
 imap <buffer> posnat ℕ⁺
 imap <buffer> equiv ≡
-imap <buffer> neg ¬
+imap <buffer> lnot ¬
 
 " Greek alphabet...
 imap <buffer> alpha α
