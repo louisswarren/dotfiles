@@ -94,9 +94,9 @@ inoremap jk <esc>
 
 " Semicolon to do colon commands
 nnoremap ; :
-nnoremap ;; ;
+nnoremap : ;
 vnoremap ; :
-vnoremap ;; ;
+vnoremap ; ;
 
 " Use j and k like a human on wrapped lines
 noremap j gj

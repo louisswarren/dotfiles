@@ -1,4 +1,8 @@
-.vim/autoload/*
-.vim/plugged/*
 .vim/.netrwhist
+.vim/autoload/*
+.vim/colors/*
+.vim/plugged/*
 .vim/swap/*
+.vim/tmp/*
+
+py3status/__pycache__/*
