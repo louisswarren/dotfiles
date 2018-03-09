@@ -163,6 +163,11 @@ nnoremap <leader>d 0yWo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 
+vnoremap <leader>= :Tabularize /=<cr>
+vnoremap <leader>; :Tabularize /:<cr>
+vnoremap <leader>- :Tabularize /→<cr>
+
+
 imap <leader>div ÷
 
 " My own imaps, because <leader> is annoying
