@@ -14,6 +14,11 @@ def installed_version():
     search_result = run('pacman', '-Qs', '^linux$')
     return re.match(r"local/linux ([\d.-]+)", search_result).groups()[0]
 
+def diff_str(old, new):
+    new_parts = new.split('.')
+    for i, old_part in enumerate(old.split('.')):
+        if old_part != new_parts[i]:
+            return '.' + '.'.join(new_parts[i:])
 
 class Py3status:
     color = '#FF0000'
@@ -23,9 +28,10 @@ class Py3status:
 
         running = running_version()
         installed = installed_version()
+        diff = diff_str(running, installed)
 
         if running != installed:
-            params['diff'] = f'{running} -> {installed}'
+            params['diff'] = f'{running} -> {diff}'
 
         text_format = "[\?color={} {{diff}} ]".format(self.color)
 
