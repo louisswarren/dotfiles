@@ -134,6 +134,8 @@ nnoremap <C-k> <C-W><C-K>
 nnoremap <C-l> <C-W><C-L>
 nnoremap <C-h> <C-W><C-H>
 
+nnoremap <leader>w :only<cr>
+
 " Doesn't work
 nnoremap <S-Up> <C-W>-
 nnoremap <S-Down> <C-W>+
