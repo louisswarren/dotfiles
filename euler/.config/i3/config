@@ -177,6 +177,7 @@ smart_borders on
 
 
 exec --no-startup-id redshift
+exec --no-startup-id dunst
 
 bindsym $super+w exec "firefox-beta"
 
