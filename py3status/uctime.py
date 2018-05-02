@@ -1,4 +1,4 @@
-from time import strftime
+from time import strftime, time
 
 uc_weeks = {
         (2018, 17): ('T2-1', 6),
@@ -34,8 +34,8 @@ uc_weeks = {
 }
 
 class Py3status:
-    format = '%Y-%m-%d %H:%M:%S %Z'
-    ucid = '_uc'
+    format = '{}'
+    interval = 1
     show_frac = False
 
     def uctime(self):
@@ -43,10 +43,9 @@ class Py3status:
         week, frac = uc_weeks[yearno, weekno]
         if self.show_frac:
             week += '/' + str(frac)
-        fmt = self.format.replace('%' + self.ucid, week)
         return {
-            'full_text': strftime(fmt),
-            'cached_until': self.py3.time_in(1),
+            'full_text': self.py3.safe_format(self.format, {'': week}),
+            'cached_until': self.py3.time_in(self.interval),
         }
 
     def on_click(self, event):
