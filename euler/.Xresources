@@ -1,6 +1,8 @@
 URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
 URxvt.scrollBar: false
 
+URxvt.urgentOnBell: true
+
 ! Colored man pages
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #d7d7d7
