@@ -146,6 +146,7 @@ imap <buffer> \Omega Ω
 
 
 imap <buffer> \mid ∣
+imap <buffer> \qeq ≟
 
 nnoremap <f9> :!agda --vim %<cr>
 set expandtab
