@@ -180,6 +180,10 @@ imap <buffer> dju ⊎
 imap <buffer> \B 𝔹
 imap <buffer> approx ≈
 
+imap <buffer> \la ⟨
+imap <buffer> \ra ⟩
+imap <buffer> \sm ∖
+
 " Arrows
 imap <buffer> to<space> →<space>
 iabbrev limp ⇒
