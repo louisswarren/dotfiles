@@ -142,6 +142,8 @@ nnoremap <S-Down> <C-W>+
 nnoremap <S-Left> <C-W><
 nnoremap <S-Right> <C-W>>
 
+" Delete something, then select something else and use this to swap
+vnoremap <C-X> <Esc>`.``gvP``P
 
 """"""""
 " gVim "
