@@ -227,4 +227,5 @@ noreabbrev builtinbool open import Agda.Builtin.Bool
 noreabbrev builtinequality open import Agda.Builtin.Equality
 noreabbrev builtinlist open import Agda.Builtin.List
 noreabbrev builtinnat open import Agda.Builtin.Nat renaming (Nat to ℕ)
+noreabbrev builtinsigma open import Agda.Builtin.Sigma
 noreabbrev builtinstring open import Agda.Builtin.String
