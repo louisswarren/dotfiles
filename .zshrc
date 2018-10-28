@@ -94,6 +94,8 @@ source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}' 'm:{[:lower:]}={[:upper:]}'
 zstyle :compinstall filename '/home/louis/.zshrc'
+zstyle ':completion:*:*:vim:*' file-patterns '^*.(aux|log|pdf|agdai):source-files' '*:all-files'
+zstyle ':completion:*:*:gvim:*' file-patterns '^*.(aux|log|pdf|agdai):source-files' '*:all-files'
 
 autoload -Uz compinit
 compinit
