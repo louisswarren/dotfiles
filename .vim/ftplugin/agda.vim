@@ -1,4 +1,5 @@
-nnoremap <f1> :source $MYVIMRC<cr>:set ft=agda<cr>
+nnoremap <f1> :set ft=agda<cr>
+nnoremap <f2> :set ft=latex<cr>:imapclear <buffer><cr>
 
 " Superscripts
 imap <buffer> ^0 ⁰
@@ -163,6 +164,7 @@ nnoremap <leader>? ??<cr>:nohl<cr>
 nnoremap <leader>d 0yWo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
+nnoremap <leader>. 0R...<esc>lvt\|r<space>f\|
 
 vnoremap <leader>= :Tabularize /=<cr>
 vnoremap <leader>; :Tabularize /:<cr>

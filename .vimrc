@@ -176,3 +176,5 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 nnoremap <f3> :.w !python3 -c 'print(__import__("sys").stdin.buffer.read().decode("unicode_escape").strip()[1:-1])' <bar> xclip -selection clipboard<cr>
 
 inoremap ;w <esc>:w<cr>
+
+set wildignore+=*.pdf,*.o,*.obj,*.jpg,*.png,*.agdai
