@@ -91,6 +91,8 @@ imap <buffer> \times ×
 imap <buffer> \oplus ⊕
 imap <buffer> \langle ⟨
 imap <buffer> \rangle ⟩
+imap <buffer> \lciel ⌈
+imap <buffer> \rciel ⌉
 
 " Greek alphabet...
 imap <buffer> \alpha α
@@ -162,8 +164,10 @@ nnoremap <leader>H ?{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>/ /?<cr>:nohl<cr>
 nnoremap <leader>? ??<cr>:nohl<cr>
 nnoremap <leader>d 0yWo<esc>pA
+nnoremap <leader>D 0y2Wo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
+nnoremap <leader>i2c o...<space>\|<space>c<space>\|<space>d<space>=<space>{! c d !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 nnoremap <leader>. 0R...<esc>lvt\|r<space>f\|
 
 vnoremap <leader>= :Tabularize /=<cr>
