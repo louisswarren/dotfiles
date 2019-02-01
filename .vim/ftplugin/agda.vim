@@ -179,55 +179,60 @@ imap <leader>div ÷
 
 " My own imaps, because <leader> is annoying
 
-imap <buffer> limp ⇒
-imap <buffer> land ∧
-imap <buffer> lor ∨
-imap <buffer> dju ⊎
-imap <buffer> \B 𝔹
-imap <buffer> approx ≈
+noreabbrev limp ⇒
+noreabbrev land ∧
+noreabbrev lor ∨
+noreabbrev dju ⊎
+noreabbrev approx ≈
 
 imap <buffer> \la ⟨
 imap <buffer> \ra ⟩
 imap <buffer> \sm ∖
+imap <buffer> \B 𝔹
 
 " Arrows
 imap <buffer> to<space> →<space>
 iabbrev limp ⇒
 
-imap <buffer> forall ∀
-imap <buffer> exists ∃
-imap <buffer> setminus ∖
 imap <buffer> <leader>nat ℕ
-imap <buffer> posnat ℕ⁺
-imap <buffer> equiv ≡
-imap <buffer> lnot ¬
+
+noreabbrev forall ∀
+noreabbrev exists ∃
+noreabbrev setminus ∖
+noreabbrev posnat ℕ⁺
+noreabbrev equiv ≡
+noreabbrev lnot ¬
 
 " Greek alphabet...
-imap <buffer> alpha α
-imap <buffer> beta β
-imap <buffer> gamma γ
-imap <buffer> delta δ
-imap <buffer> epsilon ε
-imap <buffer> lambda λ
-imap <buffer> omega ω
+noreabbrev alpha α
+noreabbrev beta β
+noreabbrev gamma γ
+noreabbrev delta δ
+noreabbrev epsilon ε
+noreabbrev lambda λ
+noreabbrev omega ω
 
-imap <buffer> Alpha Α
-imap <buffer> Beta Β
-imap <buffer> Gamma Γ
-imap <buffer> Delta Δ
-imap <buffer> Epsilon Ε
-imap <buffer> Omega Ω
-imap <buffer> Phi Φ
-imap <buffer> Psi Ψ
+noreabbrev Alpha Α
+noreabbrev Beta Β
+noreabbrev Gamma Γ
+noreabbrev Delta Δ
+noreabbrev Epsilon Ε
+noreabbrev Omega Ω
+noreabbrev Phi Φ
+noreabbrev Psi Ψ
 
-imap <buffer> tst ⊢
-imap <buffer> Gamma1 Γ₁
-imap <buffer> Gamma2 Γ₂
-imap <buffer> Gamma3 Γ₃
+noreabbrev tst ⊢
+noreabbrev Gamma1 Γ₁
+noreabbrev Gamma2 Γ₂
+noreabbrev Gamma3 Γ₃
 
 imap <buffer> \reduces ⊃
-imap <buffer> reduces ⊃
+noreabbrev reduces ⊃
 
+imap <buffer> \sprec ≺
+
+imap <buffer> \guil «
+imap <buffer> \guir »
 
 noreabbrev builtinbool open import Agda.Builtin.Bool
 noreabbrev builtinequality open import Agda.Builtin.Equality
