@@ -5,6 +5,7 @@ xrdb ~/.Xresources &
 xmodmap ~/.Xmodmap &
 xbindkeys &
 numlockx &
-xrandr --output DVI-1 --primary &
+xrandr --output DVI-D-0 --primary &
 udiskie &
+compton --config ~/.compton.conf &
 exec i3
