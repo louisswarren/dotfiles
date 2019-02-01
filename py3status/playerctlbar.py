@@ -24,8 +24,11 @@ def get_status():
         return status
     return ''
 
-def get_metadata():
-    gvariant_data = run('playerctl', 'metadata')
+def get_metadata(players):
+    if players:
+        gvariant_data = run('playerctl', '-p', players, 'metadata')
+    else:
+        gvariant_data = run('playerctl', 'metadata')
     return dict(re.findall(gvariant_re, gvariant_data))
 
 def try_extract(regex, metadata, key):
@@ -41,11 +44,13 @@ def extract_first_artist(metadata):
     return try_extract(first_list_re, metadata, 'xesam:artist')
 
 class Py3status:
-    def playerctlbar(self):
+    players = ''
+
+    def spotbar(self):
         params = {'status': get_status()}
 
         if params['status'] == 'Playing':
-            metadata = get_metadata()
+            metadata = get_metadata(self.players)
             params['title'] = extract_title(metadata)
             params['artist'] = extract_first_artist(metadata)
 
