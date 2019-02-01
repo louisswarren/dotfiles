@@ -9,8 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
-set $super Mod1+Shift
+set $mod Mod3
+set $super Mod3+Shift
+
+set $leftmonitor DVI-I-0
+set $rightmonitor DVI-D-0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -181,20 +184,21 @@ exec --no-startup-id dunst
 
 bindsym $super+w exec "firefox-beta"
 
-workspace $ws1 output DVI-0
-workspace $ws2 output DVI-1
-workspace $ws3 output DVI-0
-workspace $ws4 output DVI-1
-workspace $ws5 output DVI-0
-workspace $ws6 output DVI-1
-workspace $ws7 output DVI-0
-workspace $ws8 output DVI-1
-workspace $ws9 output DVI-0
-workspace $ws10 output DVI-1
+workspace $ws1 output $leftmonitor
+workspace $ws2 output $rightmonitor
+workspace $ws3 output $leftmonitor
+workspace $ws4 output $rightmonitor
+workspace $ws5 output $leftmonitor
+workspace $ws6 output $rightmonitor
+workspace $ws7 output $leftmonitor
+workspace $ws8 output $rightmonitor
+workspace $ws9 output $leftmonitor
+workspace $ws10 output $rightmonitor
 
 for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Steam"] move to workspace $ws6
 #for_window [class="vlc"] move to workspace $ws8
+for_window [class="csgo_linux64"] move to workspace $ws10
 for_window [class="discord"] move to workspace $ws5
 for_window [class="dota2"] move to workspace $ws10
 for_window [class="Civ5XP"] move to workspace $ws10
