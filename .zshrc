@@ -127,3 +127,4 @@ alias ll='ls -lAhF'
 alias okular='nohup okular'
 
 alias map="xargs -d '\n'"
+stty -ixon
