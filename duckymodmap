@@ -1,0 +1,27 @@
+! Map numbers to the corresponding numpad numbers
+! Remaining numbers are for the function keys
+
+keycode 87 = 1 exclam
+keycode 88 = F1
+keycode 89 = 3 numbersign
+keycode 83 = F5
+keycode 84 = 5 percent
+keycode 85 = F8
+keycode 79 = 7 ampersand
+keycode 80 = F11
+keycode 81 = 9 parenleft
+
+! -_ is on numpad *
+keycode 63 = minus underscore
+
+! Scroll lock is on numlock
+keycode 77 = Scroll_Lock
+
+! Backspace is on numpad zero
+keycode 90 = BackSpace
+
+! Home is on numpad .
+keycode 91 = Home
+
+! The other two non-working keys are numpad / and numpad -
+! The numpad plus and enter remain working keys
