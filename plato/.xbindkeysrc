@@ -95,5 +95,9 @@
 "printscreen"
    Print
 
+#Remark
+"ddisplay"
+   XF86Display
+
 #
 # End of xbindkeys configuration
