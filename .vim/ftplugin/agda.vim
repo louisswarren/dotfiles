@@ -1,5 +1,6 @@
 nnoremap <f1> :set ft=agda<cr>
-nnoremap <f2> :set ft=latex<cr>:imapclear <buffer><cr>
+nnoremap <f2> :imapclear <buffer><cr>
+nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 " Superscripts
 imap <buffer> ^0 ⁰
