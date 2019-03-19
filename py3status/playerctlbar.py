@@ -2,8 +2,6 @@
 
 import subprocess
 
-compose = lambda f: lambda g: lambda *a, **k: f(g(*a, **k))
-
 def run(*cmdlist):
     return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
 
