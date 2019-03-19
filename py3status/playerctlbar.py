@@ -7,41 +7,34 @@ compose = lambda f: lambda g: lambda *a, **k: f(g(*a, **k))
 def run(*cmdlist):
     return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
 
-def get_status():
-    status = run('playerctl', 'status')[:-1]
+def player_args(players):
+    if not players:
+        return 'playerctl',
+    else:
+        return 'playerctl', '-p', players
+
+def get_status(players):
+    status = run(*player_args(players), 'status')[:-1]
     if status in ('Playing', 'Paused'):
         return status
     return ''
 
-@compose(dict)
-def get_metadata(players):
-    if players:
-        raw = run('playerctl', '-p', players, 'metadata')
-    else:
-        raw = run('playerctl', 'metadata')
-    for line in raw.strip().split('\n'):
-        print(line)
-        components = line.split()
-        yield components[1], ' '.join(components[2:])
-
-def extract_title(metadata):
-    return metadata.get('xesam:title', '')
-
-def extract_artist(metadata):
-    return metadata.get('xesam:artist', '')
+def get_info(players, fmt):
+    args = 'metadata', '--format', f'{fmt}'
+    return run(*player_args(players), *args).strip()
 
 class Py3status:
     players = ''
+    format = '{{ artist }} / {{ title }}'
 
     def spotbar(self):
-        params = {'status': get_status()}
+        text_format = "[[ {info} ]]|[ {status} ]"
+
+        params = {'status': get_status(self.players)}
 
         if params['status'] == 'Playing':
-            metadata = get_metadata(self.players)
-            params['title'] = extract_title(metadata)
-            params['artist'] = extract_artist(metadata)
+            params['info'] = get_info(self.players, self.format)
 
-        text_format = "[[ {artist} /] {title} ]|[ {status} ]"
         return {
             'full_text': self.py3.safe_format(text_format, params),
             'cached_until': self.py3.time_in(seconds=1)
