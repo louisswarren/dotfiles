@@ -99,5 +99,9 @@
 "ddisplay"
    XF86Display
 
+#Winlock
+"winlock"
+   Mod4 + l
+
 #
 # End of xbindkeys configuration
