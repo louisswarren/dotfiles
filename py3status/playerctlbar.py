@@ -1,19 +1,8 @@
 # py3status module for playerctl
 
-import re
 import subprocess
 
-# In the absence of a GVariant parser, do some rudimentary parsing.
-# This certainly will fail for arbitrary valid input, and will accept some
-# invalid input, but it is resilient enough in practice to not be worth
-# improving until it causes a problem.
-
-# Key value pairs from GVariant data
-gvariant_re = r"'(?P<key>[\w:]+)': <(?P<value>.*?)>"
-# Strings with potentially mismatched quote marks
-string_re = r"('|\")(?P<value>.*)('|\")"
-# First value in a list (must be a string)
-first_list_re = r"\[('|\")(?P<value>.*?)('|\")(,|\]).*"
+compose = lambda f: lambda g: lambda *a, **k: f(g(*a, **k))
 
 def run(*cmdlist):
     return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
@@ -24,24 +13,22 @@ def get_status():
         return status
     return ''
 
+@compose(dict)
 def get_metadata(players):
     if players:
-        gvariant_data = run('playerctl', '-p', players, 'metadata')
+        raw = run('playerctl', '-p', players, 'metadata')
     else:
-        gvariant_data = run('playerctl', 'metadata')
-    return dict(re.findall(gvariant_re, gvariant_data))
-
-def try_extract(regex, metadata, key):
-    try:
-        return re.match(regex, metadata[key]).group('value')
-    except Exception:
-        return ''
+        raw = run('playerctl', 'metadata')
+    for line in raw.strip().split('\n'):
+        print(line)
+        components = line.split()
+        yield components[1], ' '.join(components[2:])
 
 def extract_title(metadata):
-    return try_extract(string_re, metadata, 'xesam:title')
+    return metadata.get('xesam:title', '')
 
-def extract_first_artist(metadata):
-    return try_extract(first_list_re, metadata, 'xesam:artist')
+def extract_artist(metadata):
+    return metadata.get('xesam:artist', '')
 
 class Py3status:
     players = ''
@@ -52,7 +39,7 @@ class Py3status:
         if params['status'] == 'Playing':
             metadata = get_metadata(self.players)
             params['title'] = extract_title(metadata)
-            params['artist'] = extract_first_artist(metadata)
+            params['artist'] = extract_artist(metadata)
 
         text_format = "[[ {artist} /] {title} ]|[ {status} ]"
         return {
