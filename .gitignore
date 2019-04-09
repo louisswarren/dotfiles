@@ -5,4 +5,4 @@
 .vim/swap/*
 .vim/tmp/*
 
-py3status/__pycache__/*
+__pycache__
