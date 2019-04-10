@@ -91,5 +91,17 @@
 "fshots"
    Control+Shift+Print
 
+#Shutdown
+"gksudo -D "Shutdown" -m "Shutdown?" shutdown now"
+   Control+Shift+Alt+Mod4 + XF86Calculator
+
+#No redshift
+"redshift -x; killall redshift"
+   Mod4 + e
+
+#Redshift
+"redshift -x; redshift -O 3000"
+   Mod4 + r
+
 #
 # End of xbindkeys configuration
