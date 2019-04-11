@@ -71,14 +71,6 @@
 "Command"
    XF86AudioStop
 
-#Remark
-"urxvt"
-   XF86Calculator
-
-#Suspend
-"sudo pm-suspend"
-   Control+Shift+Alt+Mod4 + XF86Calculator
-
 #Copy
 "xvkbd -xsendevent -text '\[XF86Copy]'"
    b:8
@@ -100,7 +92,7 @@
    XF86Display
 
 #Winlock
-"winlock"
+"lock"
    Mod4 + l
 
 #
