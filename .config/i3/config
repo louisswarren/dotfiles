@@ -54,8 +54,9 @@ set $base0F #b08060
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-# start a floating terminal
-bindsym $mod+c exec i3-sensible-terminal -name floating
+
+# show scratchpad
+bindsym $mod+grave scratchpad show
 
 # kill focused window
 bindsym $super+q kill
@@ -222,6 +223,7 @@ smart_borders on
 
 exec --no-startup-id redshift
 exec --no-startup-id dunst
+exec --no-startup-id scratchurxvt
 
 bindsym $super+w exec "firefox-beta"
 
@@ -245,6 +247,7 @@ for_window [class="dota2"] move to workspace $ws10
 for_window [class="Civ5XP"] move to workspace $ws10
 
 for_window [class="URxvt" instance="floating"] floating enable
+for_window [class="URxvt" instance="scratch"] move to scratchpad
 
 focus_follows_mouse no
 
