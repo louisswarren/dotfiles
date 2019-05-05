@@ -205,10 +205,10 @@ bar {
     }
 }
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 gaps inner 7
-gaps outer -4
+gaps outer -2
 smart_gaps on
 smart_borders on
 
