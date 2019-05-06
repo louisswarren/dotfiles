@@ -192,6 +192,10 @@ bindsym $mod+a mode "resize"
 # finds out, if available)
 bar {
     status_command py3status --include ~/.config/i3/py3status/
+
+	bindsym button4 nop
+	bindsym button5 nop
+
     colors {
         background $base00
         separator  $base01
