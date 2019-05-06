@@ -125,7 +125,6 @@ alias agdac='agda --compile --ghc-flag=-dynamic'
 alias gitslog='git --no-pager log --decorate --oneline --graph -20'
 
 alias ll='ls -lAhF'
-alias okular='nohup okular'
 
 alias map="xargs -d '\n'"
 stty -ixon
