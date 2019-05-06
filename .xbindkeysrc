@@ -67,8 +67,8 @@
 "playerctl play-pause"
    XF86AudioPlay
 
-#Remark
-"Command"
+#Stop
+"playerctl stop"
    XF86AudioStop
 
 #Copy
@@ -79,21 +79,21 @@
 "xvkbd -xsendevent -text '\[XF86Paste]'"
    b:9
 
-#Stop
-"playerctl stop"
-   XF86AudioStop
-
 #Printscreen
 "printscreen"
    Print
 
-#Remark
+#Displays
 "ddisplay"
    XF86Display
 
 #Winlock
 "lock"
    Mod4 + l
+
+#File manager
+"nemo"
+   XF86Launch1
 
 #
 # End of xbindkeys configuration
