@@ -95,5 +95,9 @@
 "nemo"
    XF86Launch1
 
+#Clipyt
+"clipyt"
+   Mod4 + c
+
 #
 # End of xbindkeys configuration
