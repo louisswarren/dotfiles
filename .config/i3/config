@@ -223,7 +223,7 @@ smart_borders on
 
 exec --no-startup-id redshift
 exec --no-startup-id dunst
-exec --no-startup-id scratchurxvt
+exec --no-startup-id "while true; do urxvt -name scratch; done"
 
 bindsym $super+w exec "firefox-beta"
 
