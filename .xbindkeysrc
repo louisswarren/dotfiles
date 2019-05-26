@@ -103,5 +103,9 @@
 "redshift -x; redshift -O 3000"
    Mod4 + r
 
+#Clipyt
+"clipyt"
+   Mod4 + c
+
 #
 # End of xbindkeys configuration
