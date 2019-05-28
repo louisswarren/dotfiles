@@ -32,6 +32,8 @@ class Py3status:
 
         if params['status'] == 'Playing':
             params['info'] = get_info(self.players, self.format)
+            if params['info'] == '/ -':
+                params['info'] = None
 
         return {
             'full_text': self.py3.safe_format(text_format, params),
