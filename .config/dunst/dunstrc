@@ -286,6 +286,7 @@
 # to find fitting options for rules.
 
 [spotify]
+	appname = Spotify
     format = ""
 
 #[espeak]
