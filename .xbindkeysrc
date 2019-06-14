@@ -103,5 +103,9 @@
 "clipyt"
    Mod4 + c
 
+#Nemo
+"nemo"
+   XF86Calculator
+
 #
 # End of xbindkeys configuration
