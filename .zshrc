@@ -121,6 +121,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias clip='xclip -selection clipboard'
 alias agdac='agda --compile --ghc-flag=-dynamic'
+alias zathura='zathura --fork'
 
 alias gitslog='git --no-pager log --decorate --oneline --graph -20'
 
