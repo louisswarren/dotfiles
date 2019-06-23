@@ -1,5 +1,6 @@
 nnoremap <f1> :set ft=agda<cr>
 nnoremap <f2> :imapclear <buffer><cr>
+nnoremap <buffer><f11> :w<cr> :!xelatex -shell-escape %<cr>
 nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
 
 " Superscripts
@@ -164,8 +165,8 @@ nnoremap <leader>h /{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>H ?{![^!]*!}<cr>3l:nohl<cr>
 nnoremap <leader>/ /?<cr>:nohl<cr>
 nnoremap <leader>? ??<cr>:nohl<cr>
-nnoremap <leader>d 0yWo<esc>pA
-nnoremap <leader>D 0y2Wo<esc>pA
+nnoremap <leader>f 0yWo<esc>pA
+nnoremap <leader>F 0y2Wo<esc>pA
 
 nnoremap <leader>ic o...<space>\|<space>c<space>=<space>{! c !}<esc>3h:Reload<cr>:call MakeCase()<cr>
 nnoremap <leader>i2c o...<space>\|<space>c<space>\|<space>d<space>=<space>{! c d !}<esc>3h:Reload<cr>:call MakeCase()<cr>

@@ -108,6 +108,8 @@ noremap gk k
 noremap <F7> :tabprev<CR>
 noremap <F8> :tabnext<CR>
 
+noremap <F1> <Nop>
+
 nnoremap <F10> :!make<CR>
 
 " Clear highlight search
