@@ -1,4 +1,5 @@
 nnoremap <buffer><f9> :w<cr> :!pdflatex %<cr>
+nnoremap <buffer><f11> :w<cr> :!xelatex -shell-escape %<cr>
 
 imap <C-b> <esc><C-b>O
 nnoremap <C-b> 0yf}o<esc>p:s/begin/end/<cr>:nohl<cr>
