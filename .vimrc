@@ -9,6 +9,7 @@ Plug 'derekelkins/agda-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
@@ -48,7 +49,7 @@ set number
 """""""""""""""
 
 " Colour in a column on the right side
-let &colorcolumn=join(range(81,84),",")
+let &colorcolumn=join(range(78,80),",")
 
 " Highlight trailing whitespace
 highlight TrailingWhitespace ctermbg=magenta

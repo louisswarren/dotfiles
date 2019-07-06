@@ -151,7 +151,9 @@ imap <buffer> \Omega Ω
 
 
 imap <buffer> \mid ∣
+imap <buffer> \norm ‖
 imap <buffer> \qeq ≟
+imap <buffer> \bul •
 
 nnoremap <f9> :!agda --vim %<cr>
 set expandtab
@@ -224,6 +226,11 @@ imap <buffer> Phi Φ
 imap <buffer> Psi Ψ
 
 imap <buffer> tst ⊢
+imap <buffer> tft ⊩
+imap <buffer> tnt ⊩̷
+imap <buffer> tfe ⊨
+imap <buffer> tne ⊨̷
+
 imap <buffer> Gamma1 Γ₁
 imap <buffer> Gamma2 Γ₂
 imap <buffer> Gamma3 Γ₃
