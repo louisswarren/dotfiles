@@ -3,10 +3,6 @@ URxvt.scrollBar: false
 
 URxvt.urgentOnBell: true
 
-! Colored man pages
-URxvt.colorIT:      #87af5f
-URxvt.colorBD:      #d7d7d7
-URxvt.colorUL:      #87afd7
 
 ! Base16 PhD
 ! Scheme: Hennig Hasemann (http://leetless.de/vim.html)
@@ -62,3 +58,9 @@ URxvt.colorUL:      #87afd7
 *.color19:      base02
 *.color20:      base04
 *.color21:      base06
+
+! Colored man pages
+URxvt.colorIT:      base0B
+URxvt.colorBD:      base0A
+URxvt.colorUL:      base0E
+

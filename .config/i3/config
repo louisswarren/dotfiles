@@ -62,9 +62,9 @@ bindsym $mod+grave scratchpad show
 bindsym $super+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base05"
+bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base04" -sb "$base02"
 # start dmenu, use notify for output
-bindsym $mod+n exec dmenu_notify -nb "$base01" -nf "$base05"
+bindsym $mod+n exec dmenu_notify -nb "$base01" -nf "$base04" -sb "$base02"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -200,8 +200,8 @@ bar {
 	bindsym button5 nop
 
     colors {
-        background $base00
-        separator  $base01
+        background $base01
+        separator  $base03
         statusline $base04
 
         # State              Border  BG      Text
