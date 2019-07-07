@@ -24,6 +24,23 @@ URxvt.urgentOnBell: true
 #define base0E #9989cc
 #define base0F #b08060
 
+base16.00: base00
+base16.01: base01
+base16.02: base02
+base16.03: base03
+base16.04: base04
+base16.05: base05
+base16.06: base06
+base16.07: base07
+base16.08: base08
+base16.09: base09
+base16.0A: base0A
+base16.0B: base0B
+base16.0C: base0C
+base16.0D: base0D
+base16.0E: base0E
+base16.0F: base0F
+
 *.foreground:   base05
 #ifdef background_opacity
 *.background:   [background_opacity]base00
@@ -59,7 +76,7 @@ URxvt.urgentOnBell: true
 *.color20:      base04
 *.color21:      base06
 
-! Colored man pages
+! Coloured man pages
 URxvt.colorIT:      base0B
 URxvt.colorBD:      base0A
 URxvt.colorUL:      base0E
