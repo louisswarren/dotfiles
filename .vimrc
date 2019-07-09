@@ -63,19 +63,24 @@ autocmd InsertEnter * match TrailingWhitespace /\s\+\%#\@<!$/
 " Behaviour "
 """""""""""""
 
+" Fix backspace on some platforms
+set backspace=indent,eol,start
+
 " Make ~ an operator
 set tildeop
 
 " Tabs
 set autoindent
 set smartindent
+set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set shiftround
+set tabpagemax=20
 
 " Scrolling
-set scrolloff=4
+set scrolloff=2
 
 " Set working directory automatically
 set autochdir
@@ -86,6 +91,11 @@ set smartcase
 set incsearch
 set nohlsearch
 
+" Don't autocomplete from included files
+set complete-=i
+
+" Don't consider numbers starting with zero to be octal when inc/decrementing
+set nrformats-=octal
 
 """"""""""""
 " Bindings "
@@ -153,10 +163,8 @@ vnoremap <C-X> <Esc>`.``gvP``P
 " gVim "
 """"""""
 
-" non-freeeeeeeeee
 if has("win32")
 	set guifont=DejaVu_Sans_Mono:h12:cANSI
-	set backspace=2
 endif
 
 " Hide menu and toolbars
@@ -182,3 +190,6 @@ nnoremap <f3> :.w !python3 -c 'print(__import__("sys").stdin.buffer.read().decod
 inoremap ;w <esc>:w<cr>
 
 set wildignore+=*.pdf,*.o,*.obj,*.jpg,*.png,*.agdai
+set wildmenu
+
+set display+=lastline
