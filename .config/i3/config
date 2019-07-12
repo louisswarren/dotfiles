@@ -11,6 +11,7 @@
 
 set $mod Mod3
 set $super Mod3+Shift
+set $asuper Mod1+Shift
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -154,6 +155,17 @@ bindsym $super+7 move container to workspace $ws7
 bindsym $super+8 move container to workspace $ws8
 bindsym $super+9 move container to workspace $ws9
 bindsym $super+0 move container to workspace $ws10
+
+bindsym $asuper+1 move container to workspace $ws1
+bindsym $asuper+2 move container to workspace $ws2
+bindsym $asuper+3 move container to workspace $ws3
+bindsym $asuper+4 move container to workspace $ws4
+bindsym $asuper+5 move container to workspace $ws5
+bindsym $asuper+6 move container to workspace $ws6
+bindsym $asuper+7 move container to workspace $ws7
+bindsym $asuper+8 move container to workspace $ws8
+bindsym $asuper+9 move container to workspace $ws9
+bindsym $asuper+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $super+c reload
