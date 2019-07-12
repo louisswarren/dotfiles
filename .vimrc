@@ -8,6 +8,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'derekelkins/agda-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
+Plug 'nelstrom/vim-visual-star-search'
 Plug 'tpope/vim-surround'
 call plug#end()
 
