@@ -1,83 +1,9 @@
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=11
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12
 URxvt.scrollBar: false
 
 URxvt.urgentOnBell: true
-
-
-! Base16 PhD
-! Scheme: Hennig Hasemann (http://leetless.de/vim.html)
-
-#define base00 #061229
-#define base01 #2a3448
-#define base02 #4d5666
-#define base03 #717885
-#define base04 #9a99a3
-#define base05 #b8bbc2
-#define base06 #dbdde0
-#define base07 #ffffff
-#define base08 #d07346
-#define base09 #f0a000
-#define base0A #fbd461
-#define base0B #99bf52
-#define base0C #72b9bf
-#define base0D #5299bf
-#define base0E #9989cc
-#define base0F #b08060
-
-base16.00: base00
-base16.01: base01
-base16.02: base02
-base16.03: base03
-base16.04: base04
-base16.05: base05
-base16.06: base06
-base16.07: base07
-base16.08: base08
-base16.09: base09
-base16.0A: base0A
-base16.0B: base0B
-base16.0C: base0C
-base16.0D: base0D
-base16.0E: base0E
-base16.0F: base0F
-
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
-
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
-
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
 
 ! Coloured man pages
 URxvt.colorIT:      base0B
 URxvt.colorBD:      base0A
 URxvt.colorUL:      base0E
-
