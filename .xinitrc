@@ -6,5 +6,6 @@ xbindkeys &
 xmodmap ~/.Xmodmap &
 xset -b &
 
-xrdb ~/.Xresources &&
+xrdbbase16 &&
+xrdb -merge ~/.Xresources &&
 exec i3
