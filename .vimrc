@@ -49,7 +49,7 @@ set number
 """""""""""""""
 
 " Colour in a column on the right side
-let &colorcolumn=join(range(78,80),",")
+let &colorcolumn=join(range(81,84),",")
 
 " Highlight trailing whitespace
 highlight TrailingWhitespace ctermbg=magenta
