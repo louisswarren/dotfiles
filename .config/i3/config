@@ -11,6 +11,7 @@
 
 set $mod Mod3
 set $super Mod3+Shift
+set $asuper Mod1+Shift
 
 set $leftmonitor DVI-I-0
 set $rightmonitor DVI-D-0
@@ -61,9 +62,9 @@ bindsym $mod+grave scratchpad show
 bindsym $super+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base04" -sb "$base02"
+bindsym $mod+d exec dmenu_run -nb "$base01" -nf "$base04" -sb "$base0D" -sf "$base00"
 # start dmenu, use notify for output
-bindsym $mod+n exec dmenu_notify -nb "$base01" -nf "$base04" -sb "$base02"
+bindsym $mod+n exec dmenu_notify -nb "$base01" -nf "$base04" -sb "$base0D" -sf "$base00"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -157,6 +158,17 @@ bindsym $super+8 move container to workspace $ws8
 bindsym $super+9 move container to workspace $ws9
 bindsym $super+0 move container to workspace $ws10
 
+bindsym $asuper+1 move container to workspace $ws1
+bindsym $asuper+2 move container to workspace $ws2
+bindsym $asuper+3 move container to workspace $ws3
+bindsym $asuper+4 move container to workspace $ws4
+bindsym $asuper+5 move container to workspace $ws5
+bindsym $asuper+6 move container to workspace $ws6
+bindsym $asuper+7 move container to workspace $ws7
+bindsym $asuper+8 move container to workspace $ws8
+bindsym $asuper+9 move container to workspace $ws9
+bindsym $asuper+0 move container to workspace $ws10
+
 # reload the configuration file
 bindsym $super+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -204,11 +216,11 @@ bar {
 		statusline $base04
 
 		# State              Border  BG      Text
-		focused_workspace    $base05 $base0D $base00
-		active_workspace     $base05 $base03 $base00
-		inactive_workspace   $base03 $base01 $base05
+		focused_workspace    $base0D $base0D $base00
+		active_workspace     $base03 $base03 $base00
+		inactive_workspace   $base00 $base00 $base04
 		urgent_workspace     $base08 $base08 $base00
-		binding_mode         $base00 $base0A $base00
+		binding_mode         $base0A $base0A $base00
 	}
 }
 

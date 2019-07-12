@@ -103,5 +103,17 @@
 "clipyt"
    Mod4 + c
 
+#Winlock
+"lock"
+   Mod4 + l
+
+#File manager
+"nemo"
+   XF86Launch1
+
+#Clipyt
+"clipyt"
+   Mod4 + c
+
 #
 # End of xbindkeys configuration
