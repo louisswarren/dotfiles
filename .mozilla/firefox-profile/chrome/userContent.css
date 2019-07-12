@@ -1,0 +1,5 @@
+/* New Tab Page: No vertical scroll bar unless needed */
+body.activity-stream {
+  overflow-y: auto !important;
+}
+
