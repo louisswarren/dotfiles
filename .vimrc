@@ -8,6 +8,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'derekelkins/agda-vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'godlygeek/tabular'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:vimtex_latexmk_callback=0
