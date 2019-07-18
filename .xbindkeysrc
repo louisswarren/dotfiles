@@ -111,9 +111,5 @@
 "lock"
    Mod4 + l
 
-#Clipyt
-"clipyt"
-   Mod4 + c
-
 #
 # End of xbindkeys configuration
