@@ -189,6 +189,8 @@ imap <buffer> lor ∨
 imap <buffer> dju ⊎
 imap <buffer> approx ≈
 
+imap <buffer> \lw ⦃
+imap <buffer> \rw ⦄
 imap <buffer> \la ⟨
 imap <buffer> \ra ⟩
 imap <buffer> \sm ∖
