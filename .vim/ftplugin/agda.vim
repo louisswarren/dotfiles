@@ -195,6 +195,7 @@ imap <buffer> \la ⟨
 imap <buffer> \ra ⟩
 imap <buffer> \sm ∖
 imap <buffer> \B 𝔹
+imap <buffer> \su ⊔
 
 " Arrows
 imap <buffer> to<space> →<space>
