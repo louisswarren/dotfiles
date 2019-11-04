@@ -193,6 +193,7 @@ imap <buffer> \la ⟨
 imap <buffer> \ra ⟩
 imap <buffer> \sm ∖
 imap <buffer> \B 𝔹
+imap <buffer> \su ⊔
 
 " Arrows
 imap <buffer> to<space> →<space>
@@ -239,6 +240,8 @@ imap <buffer> \reduces ⊃
 imap <buffer> reduces ⊃
 
 imap <buffer> \sprec ≺
+imap <buffer> \succ ≽
+imap <buffer> \ssucc ≻
 
 imap <buffer> \guil «
 imap <buffer> \guir »
