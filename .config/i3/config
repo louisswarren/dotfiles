@@ -277,3 +277,5 @@ bindsym $super+f move container to workspace $ws10; workspace $ws10
 
 # Get around firefox devs not allowing you to disable Ctrl+q
 bindsym Ctrl+q exec ~/bin/noctrlq.sh
+
+focus_on_window_activation urgent
