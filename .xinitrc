@@ -12,9 +12,8 @@ numlockx &
 udiskie &
 xbindkeys &
 xmodmap ~/.Xmodmap &
-xrdb ~/.Xresources &
 xset -b &
 
-xrdbbase16 &&
-xrdb -merge ~/.Xresources &&
+./bin/xrdbbase16 bespin
+xrdb -merge ~/.Xresources
 exec i3
