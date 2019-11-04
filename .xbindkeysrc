@@ -87,8 +87,8 @@
 "ddisplay"
    XF86Display
 
-#Winlock
-"lock"
+#Lock
+"lock && internet-notify"
    Mod4 + l
 
 #File manager
