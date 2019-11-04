@@ -3,7 +3,10 @@
 import subprocess
 
 def run(*cmdlist):
-    return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
+    return subprocess.run(
+            cmdlist,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL).stdout.decode()
 
 def player_args(players):
     if not players:
