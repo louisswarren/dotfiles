@@ -1,1 +1,0 @@
-/home/louis/dotfiles/euler/.bashrc
