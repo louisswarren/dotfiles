@@ -129,3 +129,6 @@ alias ll='ls -lAhF'
 
 alias map="xargs -d '\n'"
 stty -ixon
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
