@@ -67,6 +67,10 @@
 "playerctl play-pause"
    XF86AudioPlay
 
+#Stop
+"playerctl stop"
+   XF86AudioStop
+
 #Copy
 "xvkbd -xsendevent -text '\[XF86Copy]'"
    b:8
@@ -91,6 +95,10 @@
 "gksudo -D "Shutdown" -m "Shutdown?" shutdown now"
    Control+Shift+Alt+Mod4 + XF86Calculator
 
+#Displays
+"ddisplay"
+   XF86Display
+
 #No redshift
 "redshift -x; killall redshift"
    Mod4 + e
@@ -98,6 +106,10 @@
 #Redshift
 "redshift -x; redshift -O 3000"
    Mod4 + r
+
+#File manager
+"nemo"
+   XF86Launch1
 
 #Clipyt
 "clipyt"

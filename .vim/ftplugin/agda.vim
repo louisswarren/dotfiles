@@ -242,6 +242,8 @@ imap <buffer> \reduces ⊃
 imap <buffer> reduces ⊃
 
 imap <buffer> \sprec ≺
+imap <buffer> \succ ≽
+imap <buffer> \ssucc ≻
 
 imap <buffer> \guil «
 imap <buffer> \guir »
