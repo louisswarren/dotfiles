@@ -123,5 +123,9 @@
 "lock"
    Mod4 + l
 
+#Search
+"surfcls floating duckduckgo.com"
+   Mod4 + f
+
 #
 # End of xbindkeys configuration
