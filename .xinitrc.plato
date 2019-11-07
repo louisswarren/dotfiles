@@ -14,7 +14,7 @@ xbindkeys &
 xmodmap ~/.Xmodmap &
 xset -b &
 
-./bin/xrdbbase16 phd
+./bin/xrdbbase16 gruvbox-light-soft
 xrdb -merge ~/.Xresources
 
 exec i3
