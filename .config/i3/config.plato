@@ -260,14 +260,14 @@ workspace $ws10 output $externalmonitor
 
 for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Steam"] move to workspace $ws6
-for_window [class="Surf"] move to workspace $ws5
 for_window [class="csgo_linux64"] move to workspace $ws10
 for_window [class="discord"] move to workspace $ws5
 for_window [class="dota2"] move to workspace $ws10
 for_window [class="Civ5XP"] move to workspace $ws10
 
-for_window [class="URxvt" instance="floating"] floating enable
-for_window [class="URxvt" instance="scratch"] move to scratchpad
+for_window [instance="messenger"] move to workspace $ws5
+for_window [instance="floating"] floating enable
+for_window [instance="scratch"] move to scratchpad
 
 focus_follows_mouse no
 
