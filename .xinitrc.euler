@@ -15,7 +15,8 @@ xbindkeys &
 xmodmap ~/.Xmodmap &
 xset -b &
 
-./bin/xrdbbase16 bespin
+# gruvbox-dark-pale
+./bin/xrdbbase16
 xrdb -merge ~/.Xresources
 
 exec i3
