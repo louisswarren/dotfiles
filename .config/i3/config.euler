@@ -129,16 +129,16 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+d focus child
 
 
-set $ws1  "1:internet"
-set $ws2  "2:internet"
-set $ws3  "3:terminal"
-set $ws4  "4:terminal"
-set $ws5  "5:messages"
-set $ws6  "6:anything"
-set $ws7  "7:watching"
-set $ws8  "8:watching"
-set $ws9  "9:bglisten"
-set $ws10 "10:fullmax"
+set $ws1  "1:webbrowser"
+set $ws2  "2:webbrowser"
+set $ws3  "3:operations"
+set $ws4  "4:operations"
+set $ws5  "5:messengers"
+set $ws6  "6:webbrowser"
+set $ws7  "7:webbrowser"
+set $ws8  "8:extraspace"
+set $ws9  "9:background"
+set $ws10 "10:maximised"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
