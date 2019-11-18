@@ -227,8 +227,8 @@ gaps outer -6
 smart_gaps on
 smart_borders on
 
-bindsym $mod+g gaps inner current set 18; gaps outer current set -6
-bindsym $super+g gaps inner current set 0; gaps outer current set 0
+bindsym $mod+g   gaps inner current set 18; gaps outer current set -6
+bindsym $super+g gaps inner current set 0;  gaps outer current set 0
 
 
 exec --no-startup-id redshift
