@@ -260,8 +260,8 @@ focus_follows_mouse no
 
 #colorclass             border  bg      text    ind     child_border
 client.focused          $base05 $base0D $base00 $base0D $base0D
-client.focused_inactive $base01 $base01 $base05 $base01 $base01
-client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.focused_inactive $base00 $base01 $base05 $base00 $base00
+client.unfocused        $base00 $base00 $base05 $base00 $base00
 client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
