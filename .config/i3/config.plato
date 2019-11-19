@@ -208,9 +208,9 @@ bar {
 		statusline $base04
 
 		# State              Border  BG      Text
-		focused_workspace    $base0D $base0D $base00
-		active_workspace     $base03 $base03 $base00
-		inactive_workspace   $base00 $base00 $base04
+		focused_workspace    $base02 $base0D $base01
+		active_workspace     $base03 $base03 $base04
+		inactive_workspace   $base03 $base02 $base04
 		urgent_workspace     $base08 $base08 $base00
 		binding_mode         $base0A $base0A $base00
 	}
