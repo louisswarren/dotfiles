@@ -216,14 +216,14 @@ bar {
 	}
 }
 
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 3
 
-gaps inner 18
-gaps outer -6
+gaps inner 20
+gaps outer -4
 smart_gaps on
 smart_borders on
 
-bindsym $mod+g   gaps inner current set 18; gaps outer current set -6
+bindsym $mod+g   gaps inner current set 20; gaps outer current set -4
 bindsym $super+g gaps inner current set 0;  gaps outer current set 0
 
 
