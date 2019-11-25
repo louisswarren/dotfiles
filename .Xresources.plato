@@ -4,6 +4,6 @@ URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
 ! Coloured man pages
-URxvt.colorIT:      base0B
-URxvt.colorBD:      base0A
-URxvt.colorUL:      base0E
+URxvt.colorIT: base0B
+URxvt.colorBD: base0A
+URxvt.colorUL: base0E
