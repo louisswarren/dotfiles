@@ -12,8 +12,8 @@
 set $mod Mod3
 set $super Mod3+Shift
 
-set $monitor LVDS-1
-set $externalmonitor VGA-1
+set $monitor LVDS1
+set $externalmonitor VGA1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -241,7 +241,7 @@ workspace $ws4  output $monitor
 workspace $ws5  output $monitor
 workspace $ws6  output $monitor
 workspace $ws7  output $monitor
-workspace $ws8  output $monitor
+workspace $ws8  output $externalmonitor
 workspace $ws9  output $monitor
 workspace $ws10 output $externalmonitor
 
