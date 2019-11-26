@@ -132,3 +132,9 @@ stty -ixon
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# If zsh is invoked interactively to run vim (via 'zsh -is vim'), do so inside
+# an interactive shell
+if [[ $1 == vim ]]; then
+	"$@"
+	set --
+fi
