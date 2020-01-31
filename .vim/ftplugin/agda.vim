@@ -45,6 +45,8 @@ imap <buffer> <--> ↔
 imap <buffer> ==> ⇒
 imap <buffer> <== ⇐
 imap <buffer> <==> ⇔
+imap <buffer> <\| ◁
+imap <buffer> \|> ▷
 
 " Symbols from mathematics and logic, LaTeX style
 imap <buffer> \forall ∀
@@ -67,7 +69,9 @@ imap <buffer> \cup ∪
 imap <buffer> \int ∫
 imap <buffer> \therefore ∴
 imap <buffer> \qed ∎
-imap <buffer> \1 𝟙
+imap <buffer> \zero 𝟘
+imap <buffer> \one 𝟙
+imap <buffer> \two 𝟚
 imap <buffer> \N ℕ
 imap <buffer> \Z ℤ
 imap <buffer> \C ℂ
@@ -154,6 +158,7 @@ imap <buffer> \mid ∣
 imap <buffer> \norm ‖
 imap <buffer> \qeq ≟
 imap <buffer> \bul •
+imap <buffer> \bcirc ●
 
 nnoremap <f9> :!agda --vim %<cr>
 set expandtab
@@ -247,6 +252,11 @@ imap <buffer> \ssucc ≻
 
 imap <buffer> \guil «
 imap <buffer> \guir »
+
+imap <buffer> \incl ↪
+
+imap <buffer> \tup ▲
+imap <buffer> \tdown ▼
 
 noreabbrev builtinbool open import Agda.Builtin.Bool
 noreabbrev builtinequality open import Agda.Builtin.Equality
