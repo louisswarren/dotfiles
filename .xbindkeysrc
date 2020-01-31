@@ -127,5 +127,9 @@
 "surfcls floating duckduckgo.com"
    Mod4 + f
 
+#Pavucontrol
+"pavucontrol --class floating"
+   Control + XF86AudioRaiseVolume
+
 #
 # End of xbindkeys configuration
