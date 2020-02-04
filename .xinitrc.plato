@@ -8,6 +8,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 ./.fehbg &
+./bin/clipslate &
 ./bin/msens "Telink Wireless Receiver Mouse" 0.8 &
 udiskie &
 xbindkeys &
