@@ -19,7 +19,6 @@ order += "volume master"
 order += "playerctlbar"
 order += "wireless wlp3s0"
 order += "battery 0"
-order += "uctime"
 order += "tztime local"
 
 kernelupdatebar {
@@ -47,11 +46,6 @@ battery 0 {
 	status_full = " ☻"
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
-}
-
-uctime {
-	format = " {} "
-	interval = 60
 }
 
 tztime local {
