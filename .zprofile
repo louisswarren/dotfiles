@@ -1,4 +1,4 @@
-export PATH=$PATH:~/bin
+export PATH=~/bin:$PATH
 export EDITOR='gvim -v'
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
