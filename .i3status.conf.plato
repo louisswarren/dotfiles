@@ -8,9 +8,9 @@
 
 general {
 	colors = true
-	color_good = "#5299bf"
-	color_degraded = "#fbd461"
-	color_bad = "#d07346"
+	color_good = "#076678"
+	color_degraded = "#b57614"
+	color_bad = "#9d0006"
 	interval = 1
 }
 
@@ -22,7 +22,7 @@ order += "battery 0"
 order += "tztime local"
 
 kernelupdatebar {
-	color = "#d07346"
+	color = "#9d0006"
 }
 
 volume master {
