@@ -9,7 +9,7 @@ fi
 
 ./.fehbg &
 ./bin/clipslate &
-./bin/msens "USB OPTICAL MOUSE" 0.45 &
+xinput set-prop "USB OPTICAL MOUSE " "libinput Accel Speed" -0.55
 numlockx &
 udiskie &
 xbindkeys &
