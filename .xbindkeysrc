@@ -127,6 +127,10 @@
 "surfcls floating duckduckgo.com"
    Mod4 + f
 
+#Wikipedia search
+"wiki"
+   Mod4 + w
+
 #Pavucontrol
 "pavucontrol --class floating"
    Control + XF86AudioRaiseVolume
