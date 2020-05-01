@@ -161,8 +161,8 @@ bindsym $super+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $super+c reload
-# re-initialise compton
-bindsym $super+t exec "killall -SIGUSR1 compton"
+# re-initialise picom
+bindsym $super+t exec "killall -SIGUSR1 picom"
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+r restart
 # exit i3 (logs you out of your X session)
@@ -229,7 +229,7 @@ bindsym $super+g gaps inner current set 0;  gaps outer current set 0
 
 exec --no-startup-id redshift
 exec --no-startup-id dunst
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id "while true; do urxvt -name scratch; done"
 
 bindsym $super+w exec "firefox-beta"
