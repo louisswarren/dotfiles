@@ -1,0 +1,8 @@
+export PATH=~/bin:$PATH
+export EDITOR='gvim -v'
+
+sudo systemctl start netctl-auto@wlp3s0.service
+
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+	exec startx -- -keeptty > .xorg.log 2>&1
+fi
