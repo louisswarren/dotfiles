@@ -258,6 +258,8 @@ for_window [class="floating"]  floating enable
 for_window [instance="messenger"] move to workspace $ws5
 for_window [instance="scratch"]   move to scratchpad
 
+for_window [class="mpv" floating] border pixel 0
+
 focus_follows_mouse no
 
 #colorclass             border  bg      text    ind     child_border
