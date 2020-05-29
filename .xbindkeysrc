@@ -92,7 +92,7 @@
    Control+Shift+Print
 
 #Shutdown
-"gksudo -D "Shutdown" -m "Shutdown?" shutdown now"
+"urxvtsudo shutdown now"
    Control+Shift+Alt+Mod4 + XF86Calculator
 
 #Displays
