@@ -15,21 +15,26 @@ general {
 }
 
 #order += "kernelupdatebar"
+order += "window"
 order += "volume master"
 order += "playerctlbar"
 order += "sensors"
 order += "tztime local"
+
+window {
+	hide_title = true
+}
 
 kernelupdatebar {
 	color = "#d07346"
 }
 
 volume master {
-	format = " %volume ♪ "
-	format_muted = " %volume m "
+	format = "%volume ♪"
+	format_muted = "%volume m"
 	device = "pulse"
 }
 
 tztime local {
-	format = " %A %-e %B %-l:%M:%S %P "
+	format = "%A %-e %B %-l:%M:%S %P"
 }

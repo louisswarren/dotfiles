@@ -29,7 +29,7 @@ class Py3status:
             'gpu': get_gpu(data),
         }
 
-        text_format = " {gpu:.0f}° / {cpu:.0f}° "
+        text_format = "{gpu:.0f}° / {cpu:.0f}°"
 
         return {
             'full_text': self.py3.safe_format(text_format, params),

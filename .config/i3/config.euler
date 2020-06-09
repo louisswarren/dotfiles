@@ -199,6 +199,9 @@ bindsym $mod+a mode "resize"
 bar {
 	status_command py3status --include ~/.config/i3/py3status/
 
+	tray_output primary
+	separator_symbol " | "
+
 	bindsym button4 nop
 	bindsym button5 nop
 
