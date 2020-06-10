@@ -15,30 +15,37 @@ general {
 }
 
 #order += "kernelupdatebar"
+order += "window"
 order += "volume master"
 order += "playerctlbar"
 order += "wireless wlp3s0"
 order += "battery 0"
 order += "tztime local"
 
+window {
+	hide_title = true
+	position = 'center'
+	min_length = 93
+}
+
 kernelupdatebar {
 	color = "#9d0006"
 }
 
 volume master {
-	format = " %volume ♪ "
-	format_muted = " %volume m "
+	format = "%volume ♪"
+	format_muted = "%volume m"
 	device = "pulse"
 }
 
 wireless wlp3s0 {
-	format_up = " %essid "
-	format_down = " down "
+	format_up = "%essid"
+	format_down = "down"
 }
 
 
 battery 0 {
-	format = " %remaining%status "
+	format = "%remaining%status (%percentage)"
 	format_down = "No battery"
 	status_chr = " ⚡"
 	status_bat = ""
@@ -46,8 +53,10 @@ battery 0 {
 	status_full = " ☻"
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
+	last_full_capacity = true
+	integer_battery_capacity = true
 }
 
 tztime local {
-	format = " %A %-e %B %-l:%M:%S %P "
+	format = "%A %-e %B %-l:%M:%S %P "
 }
