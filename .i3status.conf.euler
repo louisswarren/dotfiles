@@ -23,6 +23,8 @@ order += "tztime local"
 
 window {
 	hide_title = true
+	position = 'center'
+	min_length = 126
 }
 
 kernelupdatebar {
@@ -36,5 +38,5 @@ volume master {
 }
 
 tztime local {
-	format = "%A %-e %B %-l:%M:%S %P"
+	format = "%A %-e %B %-l:%M:%S %P "
 }
