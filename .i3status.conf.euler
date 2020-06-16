@@ -14,8 +14,8 @@ general {
 	interval = 1
 }
 
-#order += "kernelupdatebar"
 order += "window"
+order += "kernelupdatebar"
 order += "volume master"
 order += "playerctlbar"
 order += "sensors"

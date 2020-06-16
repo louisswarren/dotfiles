@@ -7,12 +7,12 @@ def run(*cmdlist):
     return subprocess.run(cmdlist, stdout=subprocess.PIPE).stdout.decode()
 
 def running_version():
-    uname_result = run('uname', '-r')
-    return re.match(r"([\d.-]+)-ARCH", uname_result).groups()[0]
+    uname_revision = run('uname', '-r')
+    return uname_revision.split('-')[0]
 
 def installed_version():
-    search_result = run('pacman', '-Qs', '^linux$')
-    return re.match(r"local/linux ([\d.-]+)", search_result).groups()[0]
+    pacman_version = run('pacman', '-Q', 'linux').split()[-1]
+    return pacman_version[:pacman_version.rfind('.')]
 
 def diff_str(old, new):
     new_parts = new.split('.')
@@ -33,11 +33,11 @@ class Py3status:
         if running != installed:
             params['diff'] = f'{running} -> {diff}'
 
-        text_format = "[\?color={} {{diff}} ]".format(self.color)
+        text_format = "[\?color={} {{diff}}]".format(self.color)
 
         return {
             'full_text': self.py3.safe_format(text_format, params),
-            'cached_until': self.py3.time_in(seconds=60)
+            'cached_until': self.py3.time_in(seconds=360)
         }
 
 
