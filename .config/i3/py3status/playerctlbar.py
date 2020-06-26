@@ -26,10 +26,10 @@ def get_info(players, fmt):
 
 class Py3status:
     players = ''
-    format = '{{ artist }} / {{ title }}'
+    format = '{{artist}} / {{title}}'
 
     def spotbar(self):
-        text_format = "[[ {info} ]]|[ {status} ]"
+        text_format = "[[{info}]]|[{status}]"
 
         params = {'status': get_status(self.players)}
 
