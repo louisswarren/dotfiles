@@ -250,6 +250,8 @@ imap <buffer> \sprec ≺
 imap <buffer> \succ ≽
 imap <buffer> \ssucc ≻
 
+imap <buffer> \pref ⊑
+
 imap <buffer> \guil «
 imap <buffer> \guir »
 
