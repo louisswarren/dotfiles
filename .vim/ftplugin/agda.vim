@@ -99,6 +99,9 @@ imap <buffer> \langle ⟨
 imap <buffer> \rangle ⟩
 imap <buffer> \lciel ⌈
 imap <buffer> \rciel ⌉
+imap <buffer> \lfloor ⌊
+imap <buffer> \rfloor ⌋
+
 
 " Greek alphabet...
 imap <buffer> \alpha α
@@ -259,6 +262,9 @@ imap <buffer> \incl ↪
 
 imap <buffer> \tup ▲
 imap <buffer> \tdown ▼
+
+imap <buffer> \?? ⁇
+imap <buffer> \sq □
 
 noreabbrev builtinbool open import Agda.Builtin.Bool
 noreabbrev builtinequality open import Agda.Builtin.Equality
