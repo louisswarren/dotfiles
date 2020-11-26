@@ -126,10 +126,9 @@ alias zathura='zathura 2> /dev/null --fork'
 alias cp='cp -iv'
 
 alias gitslog='git --no-pager log --decorate --oneline --graph -20'
+alias gittracked='git ls-tree -r --name-only'
 
 alias ll='ls -lAhF'
-
-alias list=tail -n +1
 
 alias map="xargs -d '\n'"
 stty -ixon

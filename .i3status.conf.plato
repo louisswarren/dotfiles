@@ -14,8 +14,8 @@ general {
 	interval = 1
 }
 
-#order += "kernelupdatebar"
 order += "window"
+order += "kernelupdatebar"
 order += "volume master"
 order += "playerctlbar"
 order += "wireless wlp3s0"
@@ -24,8 +24,6 @@ order += "tztime local"
 
 window {
 	hide_title = true
-	position = 'center'
-	min_length = 93
 }
 
 kernelupdatebar {
