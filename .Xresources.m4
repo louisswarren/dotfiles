@@ -1,4 +1,8 @@
+if_plato(`
 URxvt.font: xft:DejaVu Sans Mono for Powerline:size=10,xft:DejaVuSansCondensed
+') if_euler(`
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=12,xft:DejaVuSansCondensed
+')
 URxvt.scrollBar: false
 
 URxvt.urgentOnBell: true
