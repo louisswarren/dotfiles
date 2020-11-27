@@ -6,3 +6,11 @@
 .vim/tmp/*
 
 __pycache__
+
+# m4 generated
+.config/i3/config
+.config/i3status/config
+.config/dunst/dunstrc
+.Xresources
+.xinitrc
+.zprofile

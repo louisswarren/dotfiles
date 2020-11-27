@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Generate all .m4 file outputs - being lazy and just re-running the script
+# with an argument. To be safe AND lazy, add a useless argument just to make
+# sure this doesn't fork bomb me some day if I change how this is done.
+if [ -z "$1" ]; then
+	exec find $(dirname -- "$0") -name '*.m4' -exec "./$0" '{}' 'safety' \;
+fi
+
+# Generate $1 from its .m4 file.
+
+# Piping this program into .gitignore is a good idea
+echo "${1%.m4}"
+m4 --prefix-builtins - "$1" > "${1%.m4}" << 'EOF'
+m4_divert(-1)
+m4_define(HOST, m4_esyscmd(`echo -n $(hostname)'))
+m4_define(`if_host', `m4_ifelse(HOST, `$1', `$2', `$3')')
+m4_define(`if_plato', `m4_ifelse(HOST, `plato', `$1', `$2')')
+m4_define(`if_euler', `m4_ifelse(HOST, `euler', `$1', `$2')')
+m4_divert(0)m4_dnl
+EOF
