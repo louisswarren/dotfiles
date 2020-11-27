@@ -2,7 +2,11 @@
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
+if_euler(`
+    monitor = 1
+') if_plato(`
     monitor = 0
+')
 
     # Display notification on focused monitor.  Possible modes are:
     #   mouse: follow mouse pointer
@@ -29,7 +33,11 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
+if_euler(`
+    geometry = "400x5+30+20"
+') if_plato(`
     geometry = "0x5-30+20"
+')
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -64,7 +72,11 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
+if_euler(`
+    frame_color = "#5e5d5c"
+') if_plato(`
     frame_color = "#4d5666"
+')
 
     # Define a color for the separator.
     # possible values are:
@@ -85,7 +97,11 @@
 
     ### Text ###
 
+if_euler(`
+    font = DejaVu Sans Mono 10
+') if_plato(`
     font = DejaVu Sans Mono 8
+')
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -159,13 +175,21 @@
     ### Icons ###
 
     # Align icons left/right/off
+if_euler(`
+    icon_position = left
+') if_plato(`
     icon_position = right
+')
 
     # Scale larger icons down to this size, set to 0 to disable
     max_icon_size = 32
 
     # Paths to default icons.
+if_euler(`
+    icon_path = /usr/share/icons/breeze-dark/status/16/:/usr/share/icons/breeze-dark/devices/16/
+') if_plato(`
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+')
 
     ### History ###
 
@@ -245,23 +269,29 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
+if_plato(`
     background = "#222222"
     foreground = "#888888"
+')
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
+if_plato(`
     background = "#2a3448"
     foreground = "#b8bbc2"
+')
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
+if_plato(`
     background = "#900000"
     foreground = "#ffffff"
     frame_color = "#ff0000"
+')
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
@@ -285,10 +315,11 @@
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
 
+if_plato(`
 [spotify]
 	appname = Spotify
     format = ""
-
+')
 #[espeak]
 #    summary = "*"
 #    script = dunst_espeak.sh
@@ -328,3 +359,26 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
+if_euler(`
+[base16_low]
+    msg_urgency = low
+    background = "#3a3a3a"
+    foreground = "#8a8a8a"
+    frame_color = "#dab997"
+    separator_color = "#dab997"
+
+[base16_normal]
+    msg_urgency = normal
+    background = "#4e4e4e"
+    foreground = "#dab997"
+    frame_color = "#dab997"
+    separator_color = "#dab997"
+
+[base16_critical]
+    msg_urgency = critical
+    background = "#d75f5f"
+    foreground = "#d5c4a1"
+    frame_color = "#dab997"
+    separator_color = "#dab997"
+')
