@@ -12,8 +12,13 @@
 set $mod Mod3
 set $super Mod3+Shift
 
+if_euler(`
 set $leftmonitor DVI-I-0
 set $rightmonitor DVI-D-0
+') if_plato(`
+set $monitor LVDS1
+set $externalmonitor VGA1
+')
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -21,7 +26,11 @@ set $rightmonitor DVI-D-0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
+if_euler(`
 font pango:DejaVu Sans Mono 10
+')if_plato(`
+font pango:DejaVu Sans Mono 9
+')
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -125,6 +134,7 @@ bindsym $mod+space focus mode_toggle
 #bindsym $mod+d focus child
 
 
+if_euler(`
 set $ws1  "1:webbrowser"
 set $ws2  "2:webbrowser"
 set $ws3  "3:operations"
@@ -135,6 +145,18 @@ set $ws7  "7:webbrowser"
 set $ws8  "8:extraspace"
 set $ws9  "9:background"
 set $ws10 "10:maximised"
+')if_plato(`
+set $ws1  "1:internet"
+set $ws2  "2:latexpdf"
+set $ws3  "3:terminal"
+set $ws4  "4:terminal"
+set $ws5  "5:messages"
+set $ws6  "6:anything"
+set $ws7  "7:watching"
+set $ws8  "8:watching"
+set $ws9  "9:bglisten"
+set $ws10 "10:fullmax"
+')
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -177,10 +199,17 @@ mode "resize" {
 	# Pressing right will grow the window’s width.
 	# Pressing up will shrink the window’s height.
 	# Pressing down will grow the window’s height.
+if_euler(`
 	bindsym h resize shrink width  5 px or 5 ppt
 	bindsym j resize grow   height 5 px or 5 ppt
 	bindsym k resize shrink height 5 px or 5 ppt
 	bindsym l resize grow   width  5 px or 5 ppt
+')if_plato(`
+	bindsym h resize shrink width  2 px or 2 ppt
+	bindsym j resize grow   height 5 px or 5 ppt
+	bindsym k resize shrink height 5 px or 5 ppt
+	bindsym l resize grow   width  2 px or 2 ppt
+')
 
 	# same bindings, but for the arrow keys
 	bindsym Left  resize shrink width  5 px or 5 ppt
@@ -200,7 +229,9 @@ bindsym $mod+a mode "resize"
 bar {
 	status_command py3status --include ~/.config/i3/py3status/
 
+if_euler(`
 	tray_output primary
+')
 	separator_symbol " | "
 
 	bindsym button4 nop
@@ -213,21 +244,41 @@ bar {
 
 		# State              Border  BG      Text
 		focused_workspace    $base0D $base0D $base01
+if_euler(`
 		active_workspace     $base03 $base02 $base04
 		inactive_workspace   $base00 $base00 $base04
+')if_plato(`
+		active_workspace     $base03 $base03 $base05
+		inactive_workspace   $base03 $base02 $base05
+')
 		urgent_workspace     $base08 $base08 $base00
 		binding_mode         $base0A $base0A $base00
+
 	}
 }
 
+if_euler(`
 for_window [class="^.*"] border pixel 2
+')if_plato(`
+for_window [class="^.*"] border pixel 3
+')
 
+if_euler(`
 gaps inner 18
 gaps outer -6
+')if_plato(`
+gaps inner 20
+gaps outer -4
+')
 smart_gaps on
 smart_borders on
 
+
+if_euler(`
 bindsym $mod+g   gaps inner current set 18; gaps outer current set -6
+')if_plato(`
+bindsym $mod+g   gaps inner current set 20; gaps outer current set -4
+')
 bindsym $super+g gaps inner current set 4;  gaps outer current set 0
 bindsym $super+b gaps inner current set 0;  gaps outer current set 0
 
@@ -239,6 +290,7 @@ exec --no-startup-id "while true; do urxvt -name scratch; done"
 
 bindsym $super+w exec "firefox-beta"
 
+if_euler(`
 workspace $ws1  output $leftmonitor
 workspace $ws2  output $rightmonitor
 workspace $ws3  output $leftmonitor
@@ -249,6 +301,18 @@ workspace $ws7  output $leftmonitor
 workspace $ws8  output $rightmonitor
 workspace $ws9  output $leftmonitor
 workspace $ws10 output $rightmonitor
+')if_plato(`
+workspace $ws1  output $monitor
+workspace $ws2  output $monitor
+workspace $ws3  output $monitor
+workspace $ws4  output $monitor
+workspace $ws5  output $monitor
+workspace $ws6  output $monitor
+workspace $ws7  output $monitor
+workspace $ws8  output $externalmonitor
+workspace $ws9  output $monitor
+workspace $ws10 output $externalmonitor
+')
 
 for_window [class="Civ5XP"]       move to workspace $ws10
 for_window [class="Spotify"]      move to workspace $ws9
@@ -269,8 +333,13 @@ focus_follows_mouse no
 
 #colorclass             border  bg      text    ind     child_border
 client.focused          $base0D $base0D $base01 $base0D $base0D
+if_euler(`
 client.focused_inactive $base02 $base02 $base04 $base01 $base01
 client.unfocused        $base02 $base00 $base04 $base01 $base01
+')if_plato(`
+client.focused_inactive $base03 $base03 $base05 $base00 $base00
+client.unfocused        $base03 $base02 $base05 $base00 $base00
+')
 client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
