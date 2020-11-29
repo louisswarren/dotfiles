@@ -31,7 +31,7 @@ class Py3status:
         diff = diff_str(running, installed)
 
         if running != installed:
-            params['diff'] = f'{running} -> {diff}'
+            params['diff'] = f'{running} → {diff}'
 
         text_format = "[\?color={} {{diff}}]".format(self.color)
 

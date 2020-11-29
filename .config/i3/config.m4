@@ -286,7 +286,7 @@ bindsym $super+b gaps inner current set 0;  gaps outer current set 0
 exec --no-startup-id redshift
 exec --no-startup-id dunst
 exec --no-startup-id picom
-exec --no-startup-id "while true; do urxvt -name scratch; done"
+exec --no-startup-id "while true; do urxvt -g 80 -name scratch; done"
 
 bindsym $super+w exec "firefox-beta"
 
@@ -320,6 +320,7 @@ for_window [class="Steam"]        move to workspace $ws6
 for_window [class="csgo_linux64"] move to workspace $ws10
 for_window [class="Caprine"]      move to workspace $ws5
 for_window [class="discord"]      move to workspace $ws3
+for_window [class="Signal"]      move to workspace $ws3
 for_window [class="dota2"]        move to workspace $ws10
 
 for_window [instance="floating"]  floating enable
