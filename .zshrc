@@ -123,8 +123,6 @@ alias clip='xclip -selection clipboard'
 alias agdac='agda --compile --ghc-flag=-dynamic'
 alias zathura='zathura 2> /dev/null --fork'
 
-alias cp='cp -iv'
-
 alias gitslog='git --no-pager log --decorate --oneline --graph -20'
 alias gittracked='git ls-tree -r --name-only'
 
