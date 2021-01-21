@@ -1,3 +1,4 @@
+nnoremap <buffer><f5> :w<cr> :!find *.pdf -mmin 1 -exec zathura --fork -- {} \;<cr>
 nnoremap <buffer><f9> :w<cr> :!pdflatex %<cr>
 nnoremap <buffer><f11> :w<cr> :!xelatex -shell-escape %<cr>
 
