@@ -131,6 +131,8 @@ alias ll='ls -lAhF'
 alias map="xargs -d '\n'"
 stty -ixon
 
+alias maxima='rlwrap maxima'
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # If zsh is invoked interactively to run vim (via 'zsh -is vim'), do so inside
