@@ -20,10 +20,10 @@ if_euler(`
 	interval = 1
 }
 
-order += "window"
 order += "kernelupdatebar"
-order += "volume master"
+order += "window"
 order += "playerctlbar"
+order += "volume master"
 if_euler(`
 order += "sensors"
 ')
@@ -58,7 +58,7 @@ volume master {
 if_plato(`
 wireless wlp3s0 {
 	format_up = "%essid"
-	format_down = "down"
+	format_down = ""
 }
 
 
