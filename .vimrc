@@ -161,6 +161,9 @@ nnoremap <S-Right> <C-W>>
 " Delete something, then select something else and use this to swap
 vnoremap <C-X> <Esc>`.``gvP``P
 
+" Search based on visual selection (using buffer v)
+vnoremap // "vy/\V<C-R>=escape(@v,'/\')<CR><CR>
+
 """"""""
 " gVim "
 """"""""
