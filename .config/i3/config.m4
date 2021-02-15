@@ -319,8 +319,13 @@ for_window [class="Spotify"]      move to workspace $ws9
 for_window [class="Steam"]        move to workspace $ws6
 for_window [class="csgo_linux64"] move to workspace $ws10
 for_window [class="Caprine"]      move to workspace $ws5
+if_euler(`
 for_window [class="discord"]      move to workspace $ws3
 for_window [class="Signal"]      move to workspace $ws3
+')if_plato(`
+for_window [class="discord"]      move to workspace $ws5
+for_window [class="Signal"]      move to workspace $ws5
+')
 for_window [class="dota2"]        move to workspace $ws10
 
 for_window [instance="floating"]  floating enable
