@@ -288,7 +288,7 @@ exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id "while true; do urxvt -g 80 -name scratch; done"
 
-bindsym $super+w exec "firefox-beta"
+bindsym $super+w exec "qutebrowser"
 
 if_euler(`
 workspace $ws1  output $leftmonitor
