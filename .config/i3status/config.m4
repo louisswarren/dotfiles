@@ -29,6 +29,7 @@ order += "sensors"
 ')
 if_plato(`
 order += "wireless wlp3s0"
+order += "net_iplist"
 order += "battery 0"
 ')
 order += "tztime local"
@@ -61,6 +62,12 @@ wireless wlp3s0 {
 	format_down = ""
 }
 
+net_iplist {
+	iface_blacklist = ["lo", "enp*", "wlp*"]
+	format = "{format_iface}"
+	format_iface = "{iface}"
+	format_no_ip = ""
+}
 
 battery 0 {
 	format = "%remaining%status (%percentage)"
