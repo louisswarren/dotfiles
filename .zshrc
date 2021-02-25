@@ -133,6 +133,8 @@ stty -ixon
 
 alias maxima='rlwrap maxima'
 
+alias await='watch -g ps -opid -p'
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # If zsh is invoked interactively to run vim (via 'zsh -is vim'), do so inside
