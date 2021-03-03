@@ -10,12 +10,22 @@ settings:
     global:
       normal:
         ',Y': spawn youtube {url}
+        ',e': edit-text
         ',y': hint links spawn youtube {hint-url}
   content.autoplay:
     global: false
   content.notifications:
     https://www.facebook.com: false
     https://www.reddit.com: false
+  editor.command:
+    global:
+    - alacritty
+    - --title
+    - floating
+    - -e
+    - gvim
+    - -v
+    - '{file}'
   url.searchengines:
     global:
       DEFAULT: https://google.com/search?q={}
