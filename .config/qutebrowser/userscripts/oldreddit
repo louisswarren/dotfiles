@@ -1,0 +1,3 @@
+#!/bin/sh
+
+echo "open https://old.reddit.com${QUTE_URL#*.reddit.com}" >> "$QUTE_FIFO"

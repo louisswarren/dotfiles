@@ -11,6 +11,7 @@ settings:
       normal:
         ',Y': spawn youtube {url}
         ',e': edit-text
+        ',r': spawn --userscript oldreddit
         ',y': hint links spawn youtube {hint-url}
   content.autoplay:
     global: false
