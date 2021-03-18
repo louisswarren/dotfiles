@@ -62,7 +62,7 @@ set_from_resource $base0F base16.0F #a16946
 
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # show scratchpad
 bindsym $mod+grave scratchpad show
@@ -286,7 +286,7 @@ bindsym $super+b gaps inner current set 0;  gaps outer current set 0
 exec --no-startup-id redshift
 exec --no-startup-id dunst
 exec --no-startup-id picom
-exec --no-startup-id "while true; do urxvt -g 80 -name scratch; done"
+exec --no-startup-id "while true; do alacritty --class scratch; done"
 
 bindsym $super+w exec "qutebrowser"
 
