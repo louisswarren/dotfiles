@@ -27,6 +27,8 @@ settings:
     - gvim
     - -v
     - '{file}'
+  tabs.title.format:
+    global: '{index}: {current_title}'
   url.searchengines:
     global:
       DEFAULT: https://google.com/search?q={}

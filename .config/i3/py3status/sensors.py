@@ -15,7 +15,9 @@ def get_cpu(j):
     temps.append(j['coretemp-isa-0000']['Core 0']['temp2_input'])
     temps.append(j['coretemp-isa-0000']['Core 1']['temp3_input'])
     temps.append(j['coretemp-isa-0000']['Core 2']['temp4_input'])
-    temps.append(j['coretemp-isa-0000']['Core 3']['temp5_input'])
+    temps.append(j['coretemp-isa-0000']['Core 8']['temp10_input'])
+    temps.append(j['coretemp-isa-0000']['Core 9']['temp11_input'])
+    temps.append(j['coretemp-isa-0000']['Core 10']['temp12_input'])
     return max(temps)
 
 

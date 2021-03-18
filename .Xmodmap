@@ -3,3 +3,15 @@ keycode 66 = Hyper_L
 
 remove Mod4 = Hyper_L
 add Mod3 = Hyper_L
+
+keycode  79 = KP_Home KP_7 KP_Home KP_7 KP_Home KP_7 KP_Home KP_7
+keycode  80 = KP_Up KP_8 KP_Up KP_8 KP_Up KP_8 KP_Up KP_8
+keycode  81 = KP_Prior KP_9 KP_Prior KP_9 KP_Prior KP_9 KP_Prior KP_9
+keycode  83 = KP_Left KP_4 KP_Left KP_4 KP_Left KP_4 KP_Left KP_4
+keycode  84 = KP_Begin KP_5 KP_Begin KP_5 KP_Begin KP_5 KP_Begin KP_5
+keycode  85 = KP_Right KP_6 KP_Right KP_6 KP_Right KP_6 KP_Right KP_6
+keycode  87 = KP_End KP_1 KP_End KP_1 KP_End KP_1 KP_End KP_1
+keycode  88 = KP_Down KP_2 KP_Down KP_2 KP_Down KP_2 KP_Down KP_2
+keycode  89 = KP_Next KP_3 KP_Next KP_3 KP_Next KP_3 KP_Next KP_3
+keycode  90 = KP_Insert KP_0 KP_Insert KP_0 KP_Insert KP_0 KP_Insert KP_0
+keycode  91 = KP_Delete KP_Decimal KP_Delete KP_Decimal KP_Delete KP_Decimal KP_Delete KP_Decimal

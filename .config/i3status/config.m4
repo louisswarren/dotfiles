@@ -36,10 +36,6 @@ order += "tztime local"
 
 window {
 	hide_title = true
-if_euler(`
-	position = "center"
-	min_length = 126
-')
 }
 
 kernelupdatebar {

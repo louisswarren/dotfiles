@@ -10,7 +10,6 @@ fi
 ./.fehbg &
 if_euler(`
 msens "USB OPTICAL MOUSE " -0.55
-numlockx &
 ')if_plato(`
 ./bin/msens "Telink Wireless Receiver Mouse" -0.2 &
 ')
