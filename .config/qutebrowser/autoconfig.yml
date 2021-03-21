@@ -9,10 +9,10 @@ settings:
   bindings.commands:
     global:
       normal:
-        ',Y': spawn youtube {url}
+        ',Y': spawn --userscript youtube
         ',e': edit-text
         ',r': spawn --userscript oldreddit
-        ',y': hint links spawn youtube {hint-url}
+        ',y': hint links userscript youtube
   content.autoplay:
     global: false
   content.notifications:

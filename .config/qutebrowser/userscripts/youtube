@@ -1,0 +1,2 @@
+#!/bin/sh
+mpv --ytdl-raw-options='format=best[height<=900]' "$QUTE_URL"
