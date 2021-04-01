@@ -16,20 +16,16 @@ settings:
   content.autoplay:
     global: false
   content.notifications:
+    https://1.informistio.com: false
+    https://2.informistio.com: false
     https://www.facebook.com: false
     https://www.reddit.com: false
-  editor.command:
-    global:
-    - alacritty
-    - --title
-    - floating
-    - -e
-    - gvim
-    - -v
-    - '{file}'
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: false
   tabs.title.format:
     global: '{index}: {current_title}'
   url.searchengines:
     global:
       DEFAULT: https://google.com/search?q={}
       y: https://www.youtube.com/results?search_query={}
+      wi: https://en.wikipedia.org/w/index.php?search={}
