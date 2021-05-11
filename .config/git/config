@@ -4,8 +4,7 @@
 [pull]
 	ff = only
 [init]
-	defautBranch = master
 	defaultBranch = master
 [alias]
-	slog = --no-pager log --decorate --oneline --graph -20
+	slog = !git --no-pager log --decorate --oneline --graph -20
 	ls = ls-tree -r --name-only
