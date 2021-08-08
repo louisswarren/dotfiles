@@ -15,6 +15,7 @@ msens "USB OPTICAL MOUSE " -0.55
 ')
 udiskie &
 xbindkeys &
+setxkbmap -option numpad:mac us
 xmodmap ~/.Xmodmap &
 xset -b &
 
