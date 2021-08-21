@@ -10,16 +10,15 @@ def sensors_json():
 def get_gpu(j):
     return j['intel5500-pci-00a3']['temp1']['temp1_input']
 
-def get_cpu(j):
-    temps = []
-    temps.append(j['coretemp-isa-0000']['Core 0']['temp2_input'])
-    temps.append(j['coretemp-isa-0000']['Core 1']['temp3_input'])
-    temps.append(j['coretemp-isa-0000']['Core 2']['temp4_input'])
-    temps.append(j['coretemp-isa-0000']['Core 8']['temp10_input'])
-    temps.append(j['coretemp-isa-0000']['Core 9']['temp11_input'])
-    temps.append(j['coretemp-isa-0000']['Core 10']['temp12_input'])
-    return max(temps)
+def try_get_temp(j, core):
+    try:
+        return j['coretemp-isa-0000'][f'Core {core}'][f'temp{core+2}_input']
+    except:
+        return float('-inf')
 
+def get_cpu(j):
+    cores = 0, 1, 2, 8, 9, 10
+    return max(try_get_temp(j, core) for core in cores)
 
 class Py3status:
     def sensors(self):
