@@ -13,7 +13,7 @@ fi
 echo "${1%.m4}"
 m4 --prefix-builtins - "$1" > "${1%.m4}" << 'EOF'
 m4_divert(-1)
-m4_define(HOST, m4_esyscmd(`echo -n $(hostname)'))
+m4_define(HOST, m4_esyscmd(`uname -n'))
 m4_define(`if_host', `m4_ifelse(HOST, `$1', `$2', `$3')')
 m4_define(`if_plato', `m4_ifelse(HOST, `plato', `$1', `$2')')
 m4_define(`if_euler', `m4_ifelse(HOST, `euler', `$1', `$2')')
